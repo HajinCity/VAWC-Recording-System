@@ -14,12 +14,43 @@ namespace VAWC_Recording_System
 {
     public partial class Form2 : Form
     {
+        private const string Format = "dddd, MMMM dd, yyyy";
         private Form activeForm;
-       
+
+
+        public string accountname
+        {
+            get { return label1.Text; }
+            set { label1.Text = value; }
+        }
+
+        public string accountrole
+        {
+            get { return label2.Text; }
+            set { label2.Text = value;}
+        }
+
+        public string accountID
+        {
+            get { return label5.Text; }
+            set { label5.Text = value; }
+        }
+
         public Form2()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Font;
+
+            Timer timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += timer1_Tick;
+            timer.Start();
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label4.Text = DateTime.Now.ToString(Format);
+            label6.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void openingForm(Form childForm)
@@ -28,6 +59,7 @@ namespace VAWC_Recording_System
                 activeForm.Close();
 
             activeForm = childForm;
+           
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -54,7 +86,7 @@ namespace VAWC_Recording_System
         }
         private void inTakeForm_btn_Click(object sender, EventArgs e)
         {
-            openingForm(new NewForms.EmptyForms());
+            openingForm(new NewForms.IntakeForm());
         }
 
         private void reports_btn_Click(object sender, EventArgs e)
@@ -62,16 +94,13 @@ namespace VAWC_Recording_System
              openingForm(new NewForms.Reports());
         }
 
-        private void settings_btn_Click(object sender, EventArgs e)
-        {
-          //  openingForm(new NewForms.NewCase);
-        }
-
         private void manageCaselist_btn_Click(object sender, EventArgs e)
         {
-            SFManageCaselist loginForm = new SFManageCaselist();
+            string currentUser = label5.Text; 
+            SFManageCaselist loginForm = new SFManageCaselist(this, currentUser);
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
+                panel4.Controls.Clear();
                 openingForm(new NewForms.ManageCaseList());
             }
         }
@@ -79,12 +108,19 @@ namespace VAWC_Recording_System
         private void logout_btn_Click(object sender, EventArgs e)
         {
             DialogResult userChoice;
-            userChoice = MessageBox.Show("Confirm if you want to Log Out", "Confirmation",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            userChoice = MessageBox.Show("Confirm if you want to log out", "Confirmation",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (userChoice == DialogResult.Yes)
             {
-              
-                Application.Exit();
+                // Hide the current form (HomeForm)
+                this.Hide();
+
+                // Show the login form (Form1)
+                Form1 loginForm = new Form1();
+                loginForm.ShowDialog(); // Use ShowDialog to open the login form
+
+                // Close the current form (HomeForm) if needed
+                this.Close();
             }
         }
 
@@ -95,7 +131,56 @@ namespace VAWC_Recording_System
 
         private void systemManagement_btn_Click(object sender, EventArgs e)
         {
-            openingForm(new NewForms.SystemManagement());
+            string userID = label5.Text; 
+            openingForm(new NewForms.SystemManagement(this, userID));
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void minimize_button_Click(object sender, EventArgs e)
+        {
+            // Minimize the form
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            DialogResult userChoice;
+            userChoice = MessageBox.Show("Note : This will also log out your account\n\nConfirm if you want to close the app", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (userChoice == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
         }
     }
 }

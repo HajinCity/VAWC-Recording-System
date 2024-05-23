@@ -20,11 +20,14 @@ namespace VAWC_Recording_System.NewForms
         MySqlCommand RSDBCommand2 = new MySqlCommand();
         MySqlDataReader RSBDReader;
         RSBDConnection dbcon = new RSBDConnection();
+
+        Form2 f;
         public ManageCaseList()
         {
             InitializeComponent();
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
             upcmbx_caseViolation.SelectedIndexChanged += upcmbx_caseSubcase_SelectedIndexChanged;
+            
         }
 
         private string GetCaseNumberFromDB(string typedCaseNo)
@@ -139,7 +142,6 @@ namespace VAWC_Recording_System.NewForms
                         uptxtbx_compOccupation.Text = RSBDReader1["comp_Occupation"].ToString();
                         uptxtbx_compPassportId.Text = RSBDReader1["comp_PassportId"].ToString();
 
-
                     }
                     RSBDReader1.Close();
 
@@ -172,7 +174,6 @@ namespace VAWC_Recording_System.NewForms
                         uptxtbx_resNationality.Text = RSBDReader2["respo_Nationality"].ToString();
                         uptxtbx_resOccupation.Text = RSBDReader2["respo_Occupation"].ToString();
                         uptxtbx_resPassportId.Text = RSBDReader2["respo_PassportID"].ToString();
-
 
                     }
 
@@ -212,14 +213,12 @@ namespace VAWC_Recording_System.NewForms
             if (string.IsNullOrEmpty(uptxtbx_comAge.Text))
                 return;
 
-
             long number;
             if (!long.TryParse(uptxtbx_comAge.Text, out number))
             {
                 uptxtbx_comAge.Text = uptxtbx_comAge.Text.Remove(uptxtbx_comAge.Text.Length - 1);
                 uptxtbx_comAge.SelectionStart = uptxtbx_comAge.Text.Length;
             }
-
 
             if (uptxtbx_comAge.Text.Length > 2)
             {
@@ -233,14 +232,12 @@ namespace VAWC_Recording_System.NewForms
             if (string.IsNullOrEmpty(uptxtbx_comContact.Text))
                 return;
 
-
             long number;
             if (!long.TryParse(uptxtbx_comContact.Text, out number))
             {
                 uptxtbx_comContact.Text = uptxtbx_comContact.Text.Remove(uptxtbx_comContact.Text.Length - 1);
                 uptxtbx_comContact.SelectionStart = uptxtbx_comContact.Text.Length;
             }
-
 
             if (uptxtbx_comContact.Text.Length > 11)
             {
@@ -254,14 +251,12 @@ namespace VAWC_Recording_System.NewForms
             if (string.IsNullOrEmpty(uptxtbx_resAge.Text))
                 return;
 
-
             long number;
             if (!long.TryParse(uptxtbx_resAge.Text, out number))
             {
                 uptxtbx_resAge.Text = uptxtbx_resAge.Text.Remove(uptxtbx_resAge.Text.Length - 1);
                 uptxtbx_resAge.SelectionStart = uptxtbx_resAge.Text.Length;
             }
-
 
             if (uptxtbx_resAge.Text.Length > 2)
             {
@@ -275,14 +270,12 @@ namespace VAWC_Recording_System.NewForms
             if (string.IsNullOrEmpty(uptxtbx_resContact.Text))
                 return;
 
-
             long number;
             if (!long.TryParse(uptxtbx_resContact.Text, out number))
             {
                 uptxtbx_resContact.Text = uptxtbx_resContact.Text.Remove(uptxtbx_resContact.Text.Length - 1);
                 uptxtbx_resContact.SelectionStart = uptxtbx_resContact.Text.Length;
             }
-
 
             if (uptxtbx_resContact.Text.Length > 11)
             {
@@ -293,8 +286,6 @@ namespace VAWC_Recording_System.NewForms
 
         private void upcmbx_caseSubcase_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-            //upcmbx_caseSubcase.Items.Clear();
 
             if (upcmbx_caseViolation.SelectedItem != null)
             {
@@ -360,10 +351,6 @@ namespace VAWC_Recording_System.NewForms
                     updateCaseQuery += "case_rLastName = @rLastName, ";
                     updateCaseQuery += "case_rFirstName = @rFirstName, ";
                     updateCaseQuery += "case_rAlias = @rAlias, ";
-                  
-
-
-                  
                     updateCaseQuery += "case_Violation = @Violation, ";
                     updateCaseQuery += "case_SubViolation = @SubViolation, ";
                     updateCaseQuery += "case_Description = @Description, ";
@@ -380,22 +367,23 @@ namespace VAWC_Recording_System.NewForms
                     MySqlCommand updateCaseCommand = new MySqlCommand(updateCaseQuery, RSDBConnect);
 
                     updateCaseCommand.Parameters.AddWithValue("@cLastName", !string.IsNullOrWhiteSpace(uptxtbx_comLN.Text) ? uptxtbx_comLN.Text : (object)DBNull.Value);
-                    updateCaseCommand.Parameters.AddWithValue("@cFirstName", uptxtbx_comFN.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@rLastName", uptxtbx_resLN.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@rFirstName", uptxtbx_resFN.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@rAlias", uptxtbx_resAlias.Text);
+                    updateCaseCommand.Parameters.AddWithValue("@cFirstName", !string.IsNullOrWhiteSpace(uptxtbx_comFN.Text) ? uptxtbx_comFN.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@rLastName", !string.IsNullOrWhiteSpace(uptxtbx_resLN.Text) ? uptxtbx_resLN.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@rFirstName", !string.IsNullOrWhiteSpace(uptxtbx_resFN.Text) ? uptxtbx_resFN.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@rAlias", !string.IsNullOrWhiteSpace(uptxtbx_resAlias.Text) ? uptxtbx_resAlias.Text : (object)DBNull.Value);
 
-                    updateCaseCommand.Parameters.AddWithValue("@Violation", upcmbx_caseViolation.SelectedItem.ToString());
-                    updateCaseCommand.Parameters.AddWithValue("@SubViolation", upcmbx_caseSubcase.SelectedItem.ToString());
-                    updateCaseCommand.Parameters.AddWithValue("@Description", uptxtb_caseDescription.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@Status", upcmbx_caseStatus.SelectedItem.ToString());
-                    updateCaseCommand.Parameters.AddWithValue("@ReferredTo", upcmbx_caseReferral.SelectedItem.ToString());
-                    updateCaseCommand.Parameters.AddWithValue("@PlaceOfIncident", upcmbx_casePlcIncident.SelectedItem.ToString());
-                    updateCaseCommand.Parameters.AddWithValue("@Purok", uptxtb_casePurok.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@Barangay", uptxtb_caseBarangay.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@City", uptxtb_caseCity.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@Province", uptxtb_caseProvince.Text);
-                    updateCaseCommand.Parameters.AddWithValue("@Region", uptxtb_caseRegion.Text);
+                    updateCaseCommand.Parameters.AddWithValue("@Violation", upcmbx_caseViolation.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@SubViolation", upcmbx_caseSubcase.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Description", !string.IsNullOrWhiteSpace(uptxtb_caseDescription.Text) ? uptxtb_caseDescription.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Status", upcmbx_caseStatus.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@ReferredTo", upcmbx_caseReferral.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@PlaceOfIncident", upcmbx_casePlcIncident.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Purok", !string.IsNullOrWhiteSpace(uptxtb_casePurok.Text) ? uptxtb_casePurok.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Barangay", !string.IsNullOrWhiteSpace(uptxtb_caseBarangay.Text) ? uptxtb_caseBarangay.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@City", !string.IsNullOrWhiteSpace(uptxtb_caseCity.Text) ? uptxtb_caseCity.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Province", !string.IsNullOrWhiteSpace(uptxtb_caseProvince.Text) ? uptxtb_caseProvince.Text : (object)DBNull.Value);
+                    updateCaseCommand.Parameters.AddWithValue("@Region", !string.IsNullOrWhiteSpace(uptxtb_caseRegion.Text) ? uptxtb_caseRegion.Text : (object)DBNull.Value);
+                   
                     updateCaseCommand.Parameters.AddWithValue("@CaseNo", caseNo);
 
                     
@@ -427,27 +415,27 @@ namespace VAWC_Recording_System.NewForms
 
                     MySqlCommand updateComplainantCommand = new MySqlCommand(updateComplainantQuery, RSDBConnect);
 
-                   
-                    updateComplainantCommand.Parameters.AddWithValue("@LastName", uptxtbx_comLN.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@FirstName", uptxtbx_comFN.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@MiddleName", uptxtbx_comMN.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Sex", upcmbx_comSx.SelectedItem.ToString());
-                    updateComplainantCommand.Parameters.AddWithValue("@Age", uptxtbx_comAge.Text);
 
-                    updateComplainantCommand.Parameters.AddWithValue("@CivilStatus", upcmbx_compCStatus.SelectedItem.ToString());
-                    updateComplainantCommand.Parameters.AddWithValue("@EducationalAttainmaent", upcmbx_compEdAtt.SelectedItem.ToString());
+                    updateComplainantCommand.Parameters.AddWithValue("@LastName", !string.IsNullOrWhiteSpace(uptxtbx_comLN.Text) ? uptxtbx_comLN.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@FirstName", !string.IsNullOrWhiteSpace(uptxtbx_comFN.Text) ? uptxtbx_comFN.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@MiddleName", !string.IsNullOrWhiteSpace(uptxtbx_comMN.Text) ? uptxtbx_comMN.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Sex", upcmbx_comSx.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Age", !string.IsNullOrWhiteSpace(uptxtbx_comAge.Text) ? uptxtbx_comAge.Text : (object)DBNull.Value);
 
-                    updateComplainantCommand.Parameters.AddWithValue("@Religion", uptxtbx_comRelgion.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@ContactNo", uptxtbx_comContact.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Purok", uptxtbx_comPurok.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Barangay", uptxtbx_comBarangay.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@City", uptxtbx_comCity.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Province", uptxtbx_comProvince.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Region", uptxtbx_comRegion.Text);
+                    updateComplainantCommand.Parameters.AddWithValue("@CivilStatus", upcmbx_compCStatus.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@EducationalAttainmaent", upcmbx_compEdAtt.SelectedItem?.ToString() ?? (object)DBNull.Value);
 
-                    updateComplainantCommand.Parameters.AddWithValue("@Nationality", uptxtbx_compNation.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@Occupationion", uptxtbx_compOccupation.Text);
-                    updateComplainantCommand.Parameters.AddWithValue("@PassportId", uptxtbx_compPassportId.Text);
+                    updateComplainantCommand.Parameters.AddWithValue("@Religion", !string.IsNullOrWhiteSpace(uptxtbx_comRelgion.Text) ? uptxtbx_comRelgion.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@ContactNo", !string.IsNullOrWhiteSpace(uptxtbx_comContact.Text) ? uptxtbx_comContact.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Purok", !string.IsNullOrWhiteSpace(uptxtbx_comPurok.Text) ? uptxtbx_comPurok.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Barangay", !string.IsNullOrWhiteSpace(uptxtbx_comBarangay.Text) ? uptxtbx_comBarangay.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@City", !string.IsNullOrWhiteSpace(uptxtbx_comCity.Text) ? uptxtbx_comCity.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Province", !string.IsNullOrWhiteSpace(uptxtbx_comProvince.Text) ? uptxtbx_comProvince.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Region", !string.IsNullOrWhiteSpace(uptxtbx_comRegion.Text) ? uptxtbx_comRegion.Text : (object)DBNull.Value);
+
+                    updateComplainantCommand.Parameters.AddWithValue("@Nationality", !string.IsNullOrWhiteSpace(uptxtbx_compNation.Text) ? uptxtbx_compNation.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@Occupationion", !string.IsNullOrWhiteSpace(uptxtbx_compOccupation.Text) ? uptxtbx_compOccupation.Text : (object)DBNull.Value);
+                    updateComplainantCommand.Parameters.AddWithValue("@PassportId", !string.IsNullOrWhiteSpace(uptxtbx_compPassportId.Text) ? uptxtbx_compPassportId.Text : (object)DBNull.Value);
 
                     updateComplainantCommand.Parameters.AddWithValue("@ComplainantID", complainantID);
 
@@ -482,29 +470,29 @@ namespace VAWC_Recording_System.NewForms
 
                     MySqlCommand updateRespondentCommand = new MySqlCommand(updateRespondentQuery, RSDBConnect);
 
-                   
-                    updateRespondentCommand.Parameters.AddWithValue("@LastName", uptxtbx_resLN.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@FirstName", uptxtbx_resFN.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@MiddleName", uptxtbx_resMN.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Alias", uptxtbx_resAlias.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Sex", upcmbx_resSx.SelectedItem.ToString());
-                    updateRespondentCommand.Parameters.AddWithValue("@Age", uptxtbx_resAge.Text);
 
-                    updateRespondentCommand.Parameters.AddWithValue("@CivilStatus", upcmbx_resCstatus.SelectedItem.ToString());
-                    updateRespondentCommand.Parameters.AddWithValue("@EducationalAttainment", upcmbx_resEdAtt.SelectedItem.ToString());
+                    updateRespondentCommand.Parameters.AddWithValue("@LastName", !string.IsNullOrWhiteSpace(uptxtbx_resLN.Text) ? uptxtbx_resLN.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@FirstName", !string.IsNullOrWhiteSpace(uptxtbx_resFN.Text) ? uptxtbx_resFN.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@MiddleName", !string.IsNullOrWhiteSpace(uptxtbx_resMN.Text) ? uptxtbx_resMN.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Alias", !string.IsNullOrWhiteSpace(uptxtbx_resAlias.Text) ? uptxtbx_resAlias.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Sex", upcmbx_resSx.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Age", !string.IsNullOrWhiteSpace(uptxtbx_resAge.Text) ? uptxtbx_resAge.Text : (object)DBNull.Value);
 
-                    updateRespondentCommand.Parameters.AddWithValue("@Religion", uptxtbx_resRelgion.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@ContactNo", uptxtbx_resContact.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Purok", uptxtbx_resPurok.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Barangay", uptxtbx_resBarangay.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@City", uptxtbx_resCity.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Province", uptxtbx_resProvince.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Region", uptxtbx_resRegion.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@RelationshipToVictim", upcmbx_resRelationship.SelectedItem.ToString());
+                    updateRespondentCommand.Parameters.AddWithValue("@CivilStatus", upcmbx_resCstatus.SelectedItem?.ToString() ?? (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@EducationalAttainment", upcmbx_resEdAtt.SelectedItem?.ToString() ?? (object)DBNull.Value);
 
-                    updateRespondentCommand.Parameters.AddWithValue("@Nationality", uptxtbx_resNationality.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@Occupation", uptxtbx_resOccupation.Text);
-                    updateRespondentCommand.Parameters.AddWithValue("@PassportID", uptxtbx_resPassportId.Text);
+                    updateRespondentCommand.Parameters.AddWithValue("@Religion", !string.IsNullOrWhiteSpace(uptxtbx_resRelgion.Text) ? uptxtbx_resRelgion.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@ContactNo", !string.IsNullOrWhiteSpace(uptxtbx_resContact.Text) ? uptxtbx_resContact.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Purok", !string.IsNullOrWhiteSpace(uptxtbx_resPurok.Text) ? uptxtbx_resPurok.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Barangay", !string.IsNullOrWhiteSpace(uptxtbx_resBarangay.Text) ? uptxtbx_resBarangay.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@City", !string.IsNullOrWhiteSpace(uptxtbx_resCity.Text) ? uptxtbx_resCity.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Province", !string.IsNullOrWhiteSpace(uptxtbx_resProvince.Text) ? uptxtbx_resProvince.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Region", !string.IsNullOrWhiteSpace(uptxtbx_resRegion.Text) ? uptxtbx_resRegion.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@RelationshipToVictim", upcmbx_resRelationship.SelectedItem?.ToString() ?? (object)DBNull.Value);
+
+                    updateRespondentCommand.Parameters.AddWithValue("@Nationality", !string.IsNullOrWhiteSpace(uptxtbx_resNationality.Text) ? uptxtbx_resNationality.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@Occupation", !string.IsNullOrWhiteSpace(uptxtbx_resOccupation.Text) ? uptxtbx_resOccupation.Text : (object)DBNull.Value);
+                    updateRespondentCommand.Parameters.AddWithValue("@PassportID", !string.IsNullOrWhiteSpace(uptxtbx_resPassportId.Text) ? uptxtbx_resPassportId.Text : (object)DBNull.Value);
 
                     updateRespondentCommand.Parameters.AddWithValue("@RespondentID", respondentID);
 

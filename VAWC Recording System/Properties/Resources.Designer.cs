@@ -63,6 +63,26 @@ namespace VAWC_Recording_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20240518_100404 {
+            get {
+                object obj = ResourceManager.GetObject("20240518_100404", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adminoutline {
+            get {
+                object obj = ResourceManager.GetObject("adminoutline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backbtn {
             get {
                 object obj = ResourceManager.GetObject("backbtn", resourceCulture);
@@ -93,6 +113,16 @@ namespace VAWC_Recording_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ep_list {
+            get {
+                object obj = ResourceManager.GetObject("ep_list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eye {
             get {
                 object obj = ResourceManager.GetObject("Eye", resourceCulture);
@@ -113,6 +143,26 @@ namespace VAWC_Recording_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gridicons_pages {
+            get {
+                object obj = ResourceManager.GetObject("gridicons_pages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_sharp_logout {
+            get {
+                object obj = ResourceManager.GetObject("ic_sharp-logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Invisible {
             get {
                 object obj = ResourceManager.GetObject("Invisible", resourceCulture);
@@ -126,6 +176,26 @@ namespace VAWC_Recording_System.Properties {
         internal static System.Drawing.Bitmap LogoCamanga_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("LogoCamanga-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_light_edit_document_sharp {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols-light_edit-document-sharp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_light_home {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols-light_home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +226,16 @@ namespace VAWC_Recording_System.Properties {
         internal static System.Drawing.Bitmap RA {
             get {
                 object obj = ResourceManager.GetObject("RA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RA_9208 {
+            get {
+                object obj = ResourceManager.GetObject("RA-9208", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +286,36 @@ namespace VAWC_Recording_System.Properties {
         internal static System.Drawing.Bitmap Rectangle_43 {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 43", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ri_list_check_3 {
+            get {
+                object obj = ResourceManager.GetObject("ri_list-check-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tdesign_system_log {
+            get {
+                object obj = ResourceManager.GetObject("tdesign_system-log", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vawclogo1 {
+            get {
+                object obj = ResourceManager.GetObject("vawclogo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -53,6 +53,8 @@ namespace VAWC_Recording_System.NewForms
             return casenumber;
         }
 
+
+
         private string caseno
         {
             get
@@ -70,12 +72,12 @@ namespace VAWC_Recording_System.NewForms
             string typedCaseNo = textBox1.Text;
             string caseNoFromDB = caseno;
 
+            ResetFormFields();
             try
             {
-                // Ensure RSDBConnect is properly initialized and opened
+               
                 RSDBConnect.Open();
 
-                // Check if the connection is open
                 if (RSDBConnect.State == ConnectionState.Open)
                 {
                     if (typedCaseNo == caseNoFromDB)
@@ -605,15 +607,174 @@ namespace VAWC_Recording_System.NewForms
             }
         }
 
-
-
-
         private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 loadthesecase();
             }
+        }
+
+        private void ResetFormFields()
+        {
+            comp_middlename.Text = "";
+            comp_age.Text = "";
+            comp_contactNo.Text = "";
+            comp_purok.Text = "";
+            comp_Barangay.Text = "";
+            comp_Muni.Text = "";
+            comp_Province.Text = "";
+            comp_Region.Text = "";
+            lblcomp_Nationality.Text = "";
+            lblcomp_Occupation.Text = "";
+            lblcomp_PassportID.Text = "";
+
+            chkComp_Male.Text = "";
+            chkComp_Female.Text = "";
+
+            comp_StSingle.Text = "";
+            comp_StMarried.Text = "";
+            comp_StLivein.Text = "";
+            comp_StWidowed.Text = "";
+            comp_StSeparated.Text = "";
+            comp_Religion1.Text = "";
+            comp_Religion2.Text = "";
+            comp_Religion3.Text = "";
+            comp_Religion4.Text = "";
+            comp_Religion5.Text = "";
+            comp_Religion6.Text = "";
+            textBox21.Text = "";
+
+            compEd1.Text = "";
+            compEd2.Text = "";
+            compEd3.Text = "";
+            compEd4.Text = "";
+            compEd5.Text = "";
+            compEd6.Text = "";
+            compEd7.Text = "";
+            compEd8.Text = "";
+            compEd9.Text = "";
+
+            lbl_respoLN.Text = "";
+            lbl_respoFN.Text = "";
+            lbl_respoMN.Text = "";
+            lbl_respoAlias.Text = "";
+            lbl_respoAge.Text = "";
+            lblrespo_Purok.Text = "";
+            lblrespo_Barangay.Text = "";
+            lblrespo_Province.Text = "";
+            lblrespo_City.Text = "";
+            lblrespo_Region.Text = "";
+            lbl_respoNationality.Text = "";
+            lbl_respoOccupation.Text = "";
+            lbl_respoPassportID.Text = "";
+
+            chkRespo_Male.Text = "";
+            chkRespo_Female.Text = "";
+
+            respo_StSingle.Text = "";
+            respo_StMarried.Text = "";
+            respo_StLivein.Text = "";
+            respo_StWidowed.Text = "";
+            respo_StSeparated.Text = "";
+
+            respo_Religion1.Text = "";
+            respo_Religion2.Text = "";
+            respo_Religion3.Text = "";
+            respo_Religion4.Text = "";
+            respo_Religion5.Text = "";
+            respo_Religion6.Text = "";
+            textBox12.Text = "";
+
+
+            respo_Ed1.Text = "";
+            respo_Ed2.Text = "";
+            respo_Ed3.Text = "";
+            respo_Ed4.Text = "";
+            respo_Ed5.Text = "";
+            respo_Ed6.Text = "";
+            respo_Ed7.Text = "";
+            respo_Ed8.Text = "";
+            respo_Ed9.Text = "";
+
+            ropv1.Text = "";
+            ropv2.Text = "";
+            ropv3.Text = "";
+            ropv4.Text = "";
+            ropv5.Text = "";
+            ropv6.Text = "";
+            ropv7.Text = "";
+            ropv8.Text = "";
+            ropv9.Text = "";
+            ropv10.Text = "";
+            ropv11.Text = "";
+            ropv12.Text = "";
+            ropv13.Text = "";
+
+            label143.Text = "";
+            label129.Text = "";
+
+            caseDescription.Text = "";
+            caseBarangay.Text = "";
+            caseCity.Text = "";
+            caseProvince.Text = "";
+            caseRegion.Text = "";
+            lblRespoIdentifyingMarks.Text = "";
+
+            plc1.Text = "";
+            plc2.Text = "";
+            plc3.Text = "";
+            plc4.Text = "";
+            plc5.Text = "";
+            plc6.Text = "";
+            plc7.Text = "";
+            plc8.Text = "";
+            plc9.Text = "";
+            plc10.Text = "";
+
+            RA1.Text = "";
+            RA9262sub1.Text = "";
+            RA9262sub2.Text = "";
+            RA9262sub3.Text = "";
+            RA9262sub4.Text = "";
+            RA9262sub5.Text = "";
+
+            RA2.Text = "";
+            RA8353sub1.Text = "";
+            RA8353sub2.Text = "";
+
+            RA3.Text = "";
+            RA7877sub1.Text = "";
+            RA7877sub2.Text = "";
+            RA7877sub3.Text = "";
+
+            RA4.Text = "";
+            RA7610sub1.Text = "";
+            RA7610sub2.Text = "";
+
+            RA5.Text = "";
+            RA6.Text = "";
+            RA7.Text = "";
+
+            RA8.Text = "";
+            RPCsub1.Text = "";
+            RPCsub2.Text = "";
+
+
+
+
+
+        }
+
+        private void EmptyForms_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void PrintNow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

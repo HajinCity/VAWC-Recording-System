@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Globalization;
+using System.Text;
 using System.Windows.Forms;
 
 namespace VAWC_Recording_System.NewForms
@@ -17,82 +18,55 @@ namespace VAWC_Recording_System.NewForms
         {
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
             InitializeComponent();
-
-            // Set up the chart
-            SetupChart();
-
-            // Populate the chart with data from the database
-            PopulateChartWithData();
         }
 
-        private void SetupChart()
+        private void LoadDataIntoLabel()
         {
-            // Assuming you have a chart control named "chart1" on your form
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
-            chart1.ChartAreas.Add("MainChartArea");
+            string query = @"
+                SELECT 
+                    case_Violation, 
+                    COUNT(*) as ViolationCount 
+                FROM 
+                    caselist 
+                WHERE 
+                    case_ComplaintDate BETWEEN @startDate AND @endDate 
+                GROUP BY 
+                    case_Violation";
 
-            // Add a series to the chart
-            var series = chart1.Series.Add("DataSeries");
-            series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-
-            // Customize x-axis labels to show month names
-            chart1.ChartAreas["MainChartArea"].AxisX.Interval = 1;
-            chart1.ChartAreas["MainChartArea"].AxisX.Minimum = 1;
-            chart1.ChartAreas["MainChartArea"].AxisX.Maximum = 12;
-
-            // Set the custom property to display month names
-            for (int i = 1; i <= 12; i++)
+            using (MySqlConnection conn = new MySqlConnection(dbcon.MyConnect()))
             {
-                chart1.ChartAreas["MainChartArea"].AxisX.CustomLabels.Add(i - 0.5, i + 0.5, GetMonthName(i));
-            }
-        }
-
-        private void PopulateChartWithData()
-        {
-            try
-            {
-
-                // Open the connection
-                RSDBConnect.Open();
-
-                // Get the current year
-                int currentYear = DateTime.Now.Year;
-
-                // Query to fetch data from the database for the current year
-                string query = $"SELECT MONTH(case_ComplaintDate) AS month, COUNT(*) AS records_count FROM caselist WHERE YEAR(case_ComplaintDate) = {currentYear} GROUP BY MONTH(case_ComplaintDate)";
-
-                RSDBCommand.CommandText = query;
-                RSDBCommand.Connection = RSDBConnect;
-
-                // Execute the query
-                RSBDReader = RSDBCommand.ExecuteReader();
-
-                // Populate the chart with data
-                while (RSBDReader.Read())
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    int month = RSBDReader.GetInt32("month");
-                    int recordsCount = RSBDReader.GetInt32("records_count");
+                    cmd.Parameters.AddWithValue("@startDate", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@endDate", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
 
-                    // Assuming your series is named "DataSeries"
-                    chart1.Series["DataSeries"].Points.AddXY(month, recordsCount);
+                    try
+                    {
+                        conn.Open();
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            StringBuilder sb = new StringBuilder();
+                            while (reader.Read())
+                            {
+                                string violation = reader["case_Violation"].ToString();
+                                int count = Convert.ToInt32(reader["ViolationCount"]);
+                                sb.AppendLine($"{violation}: {count}");
+                            }
+
+                            cnt_9262.Text = sb.ToString();
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                // Close the reader and connection
-                RSBDReader.Close();
-                RSDBConnect.Close();
-            }
         }
 
-        private string GetMonthName(int monthNumber)
+        private void button1_Click(object sender, EventArgs e)
         {
-            return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(monthNumber);
+            LoadDataIntoLabel();
         }
     }
 }

@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace VAWC_Recording_System.NewForms
 {
-    public partial class AccountDetails : Form
+    public partial class RA7610 : UserControl
     {
-        public AccountDetails()
+        public RA7610()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

@@ -174,11 +174,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewForms\AccountDetails.cs">
+    <Compile Include="NewForms\AddAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewForms\AccountDetails.Designer.cs">
-      <DependentUpon>AccountDetails.cs</DependentUpon>
+    <Compile Include="NewForms\AddAccountDetails.Designer.cs">
+      <DependentUpon>AddAccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="NewForms\CaseList.cs">
       <SubType>Form</SubType>
@@ -186,7 +186,37 @@
     <Compile Include="NewForms\CaseList.Designer.cs">
       <DependentUpon>CaseList.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewForms\RA7610.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewForms\RA7610.Designer.cs">
+      <DependentUpon>RA7610.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\RA9775.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewForms\RA9775.Designer.cs">
+      <DependentUpon>RA9775.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\SFAddingAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\SFAddingAcc.Designer.cs">
+      <DependentUpon>SFAddingAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\SFChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\SFChangePass.Designer.cs">
+      <DependentUpon>SFChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\Connection.cs" />
+    <Compile Include="NewForms\frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\HandOrgForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +301,24 @@
     <Compile Include="NewForms\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewForms\SFEditInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\SFEditInfos.Designer.cs">
+      <DependentUpon>SFEditInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\SFHandOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\SFHandOrg.Designer.cs">
+      <DependentUpon>SFHandOrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\SFvoid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\SFvoid.Designer.cs">
+      <DependentUpon>SFvoid.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\SystemManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,11 +357,26 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewForms\AccountDetails.resx">
-      <DependentUpon>AccountDetails.cs</DependentUpon>
+    <EmbeddedResource Include="NewForms\AddAccountDetails.resx">
+      <DependentUpon>AddAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\CaseList.resx">
       <DependentUpon>CaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\RA7610.resx">
+      <DependentUpon>RA7610.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\RA9775.resx">
+      <DependentUpon>RA9775.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\SFAddingAcc.resx">
+      <DependentUpon>SFAddingAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\SFChangePass.resx">
+      <DependentUpon>SFChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\HandOrgForm.resx">
       <DependentUpon>HandOrgForm.cs</DependentUpon>
@@ -356,6 +419,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\SFEditInfos.resx">
+      <DependentUpon>SFEditInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\SFHandOrg.resx">
+      <DependentUpon>SFHandOrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\SFvoid.resx">
+      <DependentUpon>SFvoid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\SystemManagement.resx">
       <DependentUpon>SystemManagement.cs</DependentUpon>
@@ -444,6 +516,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vawclogo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols-light_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ep_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ri_list-check-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols-light_edit-document-sharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gridicons_pages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tdesign_system-log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_sharp-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminoutline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RA-9208.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20240518_100404.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

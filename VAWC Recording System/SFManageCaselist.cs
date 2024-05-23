@@ -17,10 +17,16 @@ namespace VAWC_Recording_System
         MySqlCommand RSDBCommand = new MySqlCommand();
         MySqlDataReader RSBDReader;
         RSBDConnection dbcon = new RSBDConnection();
-        public SFManageCaselist()
+
+        Form2 f;
+        string loggedInUser;
+
+        public SFManageCaselist(Form2 frm, string currentUser)
         {
             InitializeComponent();
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
+            f = frm;
+            loggedInUser = currentUser; 
         }
 
         private void SecurityMLL()
@@ -28,6 +34,7 @@ namespace VAWC_Recording_System
             try
             {
                 RSDBConnect.Open();
+              
                 string query = "SELECT * FROM users WHERE user = @user AND password = @password";
                 RSDBCommand = new MySqlCommand(query, RSDBConnect);
                 RSDBCommand.Parameters.AddWithValue("@user", username_txtbx.Text);
@@ -36,13 +43,22 @@ namespace VAWC_Recording_System
 
                 if (RSBDReader.HasRows)
                 {
-                    MessageBox.Show("Officer found!");
-                    DialogResult = DialogResult.OK; // Set DialogResult to OK if login successful
-                    this.Close();
+                    RSBDReader.Read(); 
+                    string actualUserIdentifier = RSBDReader["user_id"].ToString(); 
+                    if (actualUserIdentifier == loggedInUser)
+                    {
+                        MessageBox.Show("Officer found!");
+                        DialogResult = DialogResult.OK; 
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unauthorized access attempt.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Officer not found");
+                    MessageBox.Show("Officer not found.");
                 }
             }
             catch (Exception ex)
@@ -52,10 +68,9 @@ namespace VAWC_Recording_System
             finally
             {
                 RSDBConnect.Close();
-                RSBDReader.Close();
+                RSBDReader?.Close();
             }
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {

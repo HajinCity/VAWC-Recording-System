@@ -117,4 +117,74 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Under RA 7877, work, education,or training related sexual harassment is “committed by an employer,
+employee, manager, supervisor, agent of the employer, teacher, instructor, professor, coach, trainor,
+or any person who, having authority, influence or moral ascendancy over another in a work or training
+or education environment, demands, requests or otherwise requires any sexual favor from the other,
+regardless of whether the demand, request or requirement for submission is accepted or not by the
+object of said act.”</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Work-related Sexual Harassment is committed when:
+
+1. The sexual favor is made as a condition in the hiring or in the employment, re-employment or
+    continued employment of said individual, or in granting said individual favorable compensation,
+    terms, conditions, promotions, or privileges; or refusal to grant the sexual favor results in limiting,
+    segregating or classifying the employee which in any way would discriminate, deprive or diminish
+    employment opportunities or otherwise adversely affect said employee.
+
+2. The above acts would impair the employee’s rights or privileges under existing labor laws; or
+
+3. The above acts would result in an intimidating, hostile or offensive environment for the employee.</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>1. Against one who is under the care, custody or supervision of the offender;
+2. Against one whose education, training, apprenticeship, or tutorship is entrusted to the offender;
+3. When the sexual favor is made a condition to the giving of a passing grade, or granting of honors and scholarships, or the payment of a stipend,
+    allowance or other benefits, Education or Training-related Sexual Harassment is committed:
+4. When the sexual advances result in an intimidating, hostile or offensive environment for the student, trainee or apprentice.
+    privileges, or considerations; or</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>A person who directs or induces another person to commit any act of sexual harassment or who cooperates to commit the act,
+without which the said act would not have been committed, will also be held liable under the law.</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>The employer or head of office is required by the law to prevent the occurrence of sexual harassment acts and to provide the procedures for the
+resolution, settlement or prosecution of sexual harassment. Towards this end, the employer or head of office shall:
+
+1. Promulgate appropriate rules and regulations in consultation with and jointly approved by the employees or student or trainees, through their
+    duly designated representatives. Said rules and regulations shall prescribe the procedures for the investigation of sexual harassment cases and
+    the administrative sanctions thereof.</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>The said rules and regulations should include guidelines on proper decorum in the workplace and educational or training
+institutions. Administrative sanctions shall not be a bar to prosecution in the proper courts for unlawful acts of sexual
+harassment.</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>2. Create a Committee on Decorum and Investigation (CODI) of cases on sexual harassment. The committee shall conduct meetings or as the case
+    may be, with officers and employees, teachers, instructors, professors, coaches, trainors and students or trainees to increase understanding and
+    prevent incidents of sexual harassment. It shall also conduct the investigation of alleged cases constituting sexual harassment.</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>In the case of work-related environment, the committee shall be composed of at least one (1) representative each from the
+management, the union, if any, the employees from the supervisory rank, and from the rank and file employees.
+
+In the case of the educational or training institution, the committee shall be composed of at least one (1) representative from
+the administration, the trainors, teachers, instructors, professors or coaches and students and trainees, as the case may be.
+
+The employer or head of office, educational or training institution shall disseminate or post a copy of RA 7877 for the
+information of all concerned.</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>The employer or head of office, educational or training institution will be held liable for the damages arising from acts of sexual harassment if they
+are informed by the offended party of the occurrence of such acts, yet no action has been undertaken.</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>Any person who violates the provisions of the law shall be penalized by imprisonment of not less than one (1) month nor more than six (6) months,
+or a fine of not less than Ten Thousand Pesos (P10,000) nor more than Twenty Thousand Pesos (P20,000), or both such fine and imprisonment at
+the discretion of the court. Any act arising from the violation of the provisions of this Act shall prescribe in three (3) years.</value>
+  </data>
 </root>

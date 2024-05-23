@@ -109,12 +109,12 @@ namespace VAWC_Recording_System.NewForms
             string typedCaseNo = textBox1.Text;
             string caseNoFromDB = caseno;
 
+           ResetFormFields();
             try
             {
-                // Ensure RSDBConnect is properly initialized and opened
-                RSDBConnect.Open();
 
-                // Check if the connection is open
+                RSDBConnect.Open();
+                
                 if (RSDBConnect.State == ConnectionState.Open)
                 {
                     if (typedCaseNo == caseNoFromDB)
@@ -378,7 +378,7 @@ namespace VAWC_Recording_System.NewForms
                                 }
 
 
-                               string relationshipToTheVictim = RSBDReader2["respo_RelationshipToVictim"].ToString();
+                                string relationshipToTheVictim = RSBDReader2["respo_RelationshipToVictim"].ToString();
 
                                 if (relationshipToTheVictim.Equals("Current Spouse/Partner", StringComparison.OrdinalIgnoreCase))
                                 {
@@ -432,7 +432,7 @@ namespace VAWC_Recording_System.NewForms
                                 {
                                     ropv13.Checked = true;
                                 }
-                          
+
                             }
                             RSBDReader2.Close();
 
@@ -446,12 +446,12 @@ namespace VAWC_Recording_System.NewForms
                             {
                                 DateTime complaintDate = RSBDReader3.GetDateTime("case_ComplaintDate");
 
-                           
-                                string formattedDate = complaintDate.ToString("MM-dd-yyyy"); 
 
-    
+                                string formattedDate = complaintDate.ToString("MM-dd-yyyy");
+
+
                                 label143.Text = formattedDate;
-                                label129.Text= formattedDate;
+                                label129.Text = formattedDate;
 
                                 DateTime incidentDate = RSBDReader3.GetDateTime("case_incidentDate");
                                 dateTimePicker1.Value = incidentDate;
@@ -471,7 +471,7 @@ namespace VAWC_Recording_System.NewForms
                                 {
                                     plc1.Checked = true;
                                 }
-                             
+
                                 else if (placeofIncident.Equals("Religious Institutions", StringComparison.OrdinalIgnoreCase))
                                 {
                                     plc2.Checked = true;
@@ -515,12 +515,12 @@ namespace VAWC_Recording_System.NewForms
                                 if (RAviolations.Equals("R.A. 9262: Anti Violence Against Women and their Children Act", StringComparison.OrdinalIgnoreCase))
                                 {
                                     RA1.Checked = true;
-                                   if(subViolations.Equals("Sexual Abuse", StringComparison.OrdinalIgnoreCase))
+                                    if (subViolations.Equals("Sexual Abuse", StringComparison.OrdinalIgnoreCase))
                                     {
                                         RA9262sub1.Checked = true;
                                     }
 
-                                   else if(subViolations.Equals("Psychological", StringComparison.OrdinalIgnoreCase))
+                                    else if (subViolations.Equals("Psychological", StringComparison.OrdinalIgnoreCase))
                                     {
                                         RA9262sub2.Checked = true;
                                     }
@@ -632,6 +632,7 @@ namespace VAWC_Recording_System.NewForms
                 {
                     MessageBox.Show("Database connection is not open.");
                 }
+
             }
             catch (Exception ex)
             {
@@ -644,7 +645,166 @@ namespace VAWC_Recording_System.NewForms
             }
         }
 
+       /** private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loadthesecase();
+            }
+        }
+       */
+       
+        private void ResetFormFields()
+        {
+            comp_middlename.Text = "";
+            comp_age.Text = "";
+            comp_contactNo.Text = "";
+            comp_purok.Text = "";
+            comp_Barangay.Text = "";
+            comp_Muni.Text = "";
+            comp_Province.Text = "";
+            comp_Region.Text = "";
+            lblcomp_Nationality.Text = "";
+            lblcomp_Occupation.Text = "";
+            lblcomp_PassportID.Text = "";
 
+            chkComp_Male.Checked = false;
+            chkComp_Female.Checked = false;
+
+            comp_StSingle.Checked = false;
+            comp_StMarried.Checked = false;
+            comp_StLivein.Checked = false;
+            comp_StWidowed.Checked = false;
+            comp_StSeparated.Checked = false;
+            comp_Religion1.Checked = false;
+            comp_Religion2.Checked = false;
+            comp_Religion3.Checked = false;
+            comp_Religion4.Checked = false;
+            comp_Religion5.Checked = false;
+            comp_Religion6.Checked = false;
+            textBox21.Text = "";
+
+            compEd1.Checked = false;
+            compEd2.Checked = false;
+            compEd3.Text = "";
+            compEd4.Text = "";
+            compEd5.Text = "";
+            compEd6.Text = "";
+            compEd7.Text = "";
+            compEd8.Text = "";
+            compEd9.Text = "";
+
+            lbl_respoLN.Text = "";
+            lbl_respoFN.Text = "";
+            lbl_respoMN.Text = "";
+            lbl_respoAlias.Text = "";
+            lbl_respoAge.Text = "";
+            lblrespo_Purok.Text = "";
+            lblrespo_Barangay.Text = "";
+            lblrespo_Province.Text = "";
+            lblrespo_City.Text = "";
+            lblrespo_Region.Text = "";
+            lbl_respoNationality.Text = "";
+            lbl_respoOccupation.Text = "";
+            lbl_respoPassportID.Text = "";
+
+            chkRespo_Male.Text = "";
+            chkRespo_Female.Text = "";
+
+            respo_StSingle.Text = "";
+            respo_StMarried.Text = "";
+            respo_StLivein.Text = "";
+            respo_StWidowed.Text = "";
+            respo_StSeparated.Text = "";
+
+            respo_Religion1.Text = "";
+            respo_Religion2.Text = "";
+            respo_Religion3.Text = "";
+            respo_Religion4.Text = "";
+            respo_Religion5.Text = "";
+            respo_Religion6.Text = "";
+            textBox12.Text = "";
+
+
+            respo_Ed1.Text = "";
+            respo_Ed2.Text = "";
+            respo_Ed3.Text = "";
+            respo_Ed4.Text = "";
+            respo_Ed5.Text = "";
+            respo_Ed6.Text = "";
+            respo_Ed7.Text = "";
+            respo_Ed8.Text = "";
+            respo_Ed9.Text = "";
+
+            ropv1.Text = "";
+            ropv2.Text = "";
+            ropv3.Text = "";
+            ropv4.Text = "";
+            ropv5.Text = "";
+            ropv6.Text = "";
+            ropv7.Text = "";
+            ropv8.Text = "";
+            ropv9.Text = "";
+            ropv10.Text = "";
+            ropv11.Text = "";
+            ropv12.Text = "";
+            ropv13.Text = "";
+
+            label143.Text = "";
+            label129.Text = "";
+
+            caseDescription.Text = "";
+            caseBarangay.Text = "";
+            caseCity.Text = "";
+            caseProvince.Text = "";
+            caseRegion.Text = "";
+            lblRespoIdentifyingMarks.Text = "";
+
+            plc1.Text = "";
+            plc2.Text = "";
+            plc3.Text = "";
+            plc4.Text = "";
+            plc5.Text = "";
+            plc6.Text = "";
+            plc7.Text = "";
+            plc8.Text = "";
+            plc9.Text = "";
+            plc10.Text = "";
+
+            RA1.Text = "";
+            RA9262sub1.Text = "";
+            RA9262sub2.Text = "";
+            RA9262sub3.Text = "";
+            RA9262sub4.Text = "";
+            RA9262sub5.Text = "";
+
+            RA2.Text = "";
+            RA8353sub1.Text = "";
+            RA8353sub2.Text = "";
+
+            RA3.Text = "";
+            RA7877sub1.Text = "";
+            RA7877sub2.Text = "";
+            RA7877sub3.Text = "";
+
+            RA4.Text = "";
+            RA7610sub1.Text = "";
+            RA7610sub2.Text = "";
+
+            RA5.Text = "";
+            RA6.Text = "";
+            RA7.Text = "";
+
+            RA8.Text = "";
+            RPCsub1.Text = "";
+            RPCsub2.Text = "";
+
+
+
+
+
+        }
+      
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -653,8 +813,6 @@ namespace VAWC_Recording_System.NewForms
                 loadthesecase();
             }
         }
-
-       
     }
 }
 

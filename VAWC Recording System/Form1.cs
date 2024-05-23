@@ -22,27 +22,36 @@ namespace VAWC_Recording_System
             InitializeComponent();
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
         }
+   
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                string Name = "";
+                string Role = "";
+                string users = "";
+
                 RSDBConnect.Open();
-                string query = "SELECT * FROM users WHERE user = @user AND password = @password";
+                string query = "SELECT * FROM users WHERE user = @user AND password = @password AND status = 'active'";
                 RSDBCommand = new MySqlCommand(query, RSDBConnect);
                 RSDBCommand.Parameters.AddWithValue("@user", username_txtbx.Text);
                 RSDBCommand.Parameters.AddWithValue("@password", password_txtbx.Text);
                 RSBDReader = RSDBCommand.ExecuteReader();
 
-                if (RSBDReader.HasRows)
+                if (RSBDReader.Read())
                 {
+                    Name = RSBDReader["firstName"].ToString();
+                    Role = RSBDReader["role"].ToString();
+                    users = RSBDReader["user_id"].ToString();
                     MessageBox.Show("User found!");
 
                     Form2 newForm = new Form2();
-                    
-                    newForm.StartPosition = FormStartPosition.CenterScreen; 
+                    newForm.StartPosition = FormStartPosition.CenterScreen;
                     newForm.Size = Screen.PrimaryScreen.WorkingArea.Size;
-                 //   newForm.WindowState = FormWindowState.Maximized; 
+                    newForm.accountname = Name;
+                    newForm.accountrole = Role;
+                    newForm.accountID = users;
                     newForm.Show();
                     this.Hide();
                 }
@@ -62,7 +71,42 @@ namespace VAWC_Recording_System
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            DialogResult userChoice;
+            userChoice = MessageBox.Show("Confirm if you want to close the app", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (userChoice == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
+        }
+
+        private void minimize_button_Click(object sender, EventArgs e)
+        {
+            // Minimize the form
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

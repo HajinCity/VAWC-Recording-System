@@ -117,4 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Trafficking in persons is an illegal act and is considered a violation of human rights. It has three (3)
+inter-related and interdependent elements for a situation to be considered trafficking in persons:
+
+-            – It involves the recruitment, obtaining, hiring, providing, offering, transportation, transfer,
+   maintaining, harboring, or receipt of persons with or without the victim’s consent or knowledge,
+   within or across national borders;
+
+-                – It is committed by use of threat, or use of force, or other forms or coercion, abduction,
+   fraud, deception, abuse of power or of position, taking advantage of the vulnerability of the person,
+   or the giving or receiving of payments or benefits to achieve the consent of a person having control
+   over another person; and
+
+-                   – It is done for the purpose of exploitation or the prostitution of others or other forms of
+   sexual exploitation, forced labor or services, slavery, involuntary servitude or the removal or sale of
+   organs.
+
+The recruitment, transportation, transfer, harboring, adoption or receipt of a child for the purpose of
+exploitation or when the adoption is induced by any form of consideration for exploitative purposes
+shall also be considered as “trafficking in persons” even if it does not involve any of the means
+mentioned above.</value>
+  </data>
 </root>
