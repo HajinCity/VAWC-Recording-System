@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label7.Text" xml:space="preserve">
+    <value>The State values the dignity and privacy of every human person and guarantees full respect for human rights. Toward this end, the State shall
+penalize acts that would destroy the honor, dignity and integrity of a person.</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>For purposes of this Act, the term:
+
+(a) "Broadcast" means to make public, by any means, a visual image with the intent that it be viewed by a person or persons.
+
+(b) "Capture" with respect to an image, means to videotape, photograph, film, record by any means, or broadcast.
+
+(c) "Female breast" means any portion of the female breast.
+
+(d) "Photo or video voyeurism" means the act of taking photo or video coverage of a person or group of persons performing sexual act or any
+      similar activity or of capturing an image of the private area of a person or persons without the latter's consent, under circumstances in which
+      such person/s has/have a reasonable expectation of privacy, or the act of selling, copying, reproducing, broadcasting, sharing, showing or
+      exhibiting the photo or video coverage or recordings of such sexual act or similar activity through VCD/DVD, internet, cellular phones and
+      similar means or device without the written consent of the person/s involved, notwithstanding that consent to record or take photo or video
+      coverage of same was given by such person's.
+
+(e) "Private area of a person" means the naked or undergarment clad genitals, public area, buttocks or female breast of an individual.
+
+(f) "Under circumstances in which a person has a reasonable expectation of privacy" means believe that he/she could disrobe in privacy, without
+     being concerned that an image or a private area of the person was being captured; or circumstances in which a reasonable person would
+     believe that a private area of the person would not be visible to the public, regardless of whether that person is in a public or private place.</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>It is hereby prohibited and declared unlawful for any person:
+
+(a) To take photo or video coverage of a person or group of persons performing sexual act or any similar activity or to capture an image of the
+     private area of a person/s such as the naked or undergarment clad genitals, public area, buttocks or female breast without the consent of the
+     person/s involved and under circumstances in which the person/s has/have a reasonable expectation of privacy;
+
+(b) To copy or reproduce, or to cause to be copied or reproduced, such photo or video or recording of sexual act or any similar activity with or
+      without consideration;
+
+(c) To sell or distribute, or cause to be sold or distributed, such photo or video or recording of sexual act, whether it be the original copy or
+      reproduction thereof; or
+
+(d) To publish or broadcast, or cause to be published or broadcast, whether in print or broadcast media, or show or exhibit the photo or
+      video coverage or recordings of such sexual act or any similar activity through VCD/DVD, internet, cellular phones and other similar
+      means or device.
+
+The prohibition under paragraphs (b), (c) and (d) shall apply notwithstanding that consent to record or take photo or video coverage of the
+same was given by such person/s. Any person who violates this provision shall be liable for photo or video voyeurism as defined herein.</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>The penalty of imprisonment of not less that three (3) years but not more than seven (7) years and a fine of not less than One hundred
+thousand pesos (P100,000.00) but not more than Five hundred thousand pesos (P500,000.00), or both, at the discretion of the court shall
+be imposed upon any person found guilty of violating Section 4 of this Act.
+
+If the violator is a juridical person, its license or franchise shall be automatically be deemed revoked and the persons liable shall be the
+officers thereof including the editor and reporter in the case of print media, and the station manager, editor and broadcaster in the case
+of a broadcast media.
+
+If the offender is a public officer or employee, or a professional, he/she shall be administratively liable.
+
+If the offender is an alien, he/she shall be subject to deportation proceedings after serving his/her sentence and payment of fines.</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Nothing contained in this Act, however, shall render it unlawful or punishable for any peace officer, who is authorized by a written order
+of the court, to use the record or any copy thereof as evidence in any civil, criminal investigation or trial of the crime of photo or video
+voyeurism: Provided, That such written order shall only be issued or granted upon written application and the examination under oath or
+affirmation of the applicant and the witnesses he/she may produce, and upon showing that there are reasonable grounds to believe that
+photo or video voyeurism has been committed or is about to be committed, and that the evidence to be obtained is essential to the
+conviction of any person for, or to the solution or prevention of such, crime.</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Any record, photo or video, or copy thereof, obtained or secured by any person in violation of the preceding sections shall not be admissible
+in evidence in any judicial, quasi-judicial, legislative or administrative hearing or investigation.</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Any law, presidential decree or issuance, executive order, letter of instruction , administrative order, rule or regulation contrary to or
+inconsistent with the provisions of this Act is hereby repealed, modified or amended accordingly.</value>
+  </data>
+</root>

@@ -212,7 +212,7 @@ namespace VAWC_Recording_System.NewForms
 
         private void FileCase()
         {
-            
+
             try
             {
                 //Carlos Code
@@ -228,9 +228,6 @@ namespace VAWC_Recording_System.NewForms
                 //label58.Text = CaseGenerateAutoID().ToString();
                 //label59.Text = CompGenerateAutoID().ToString();
                 //label60.Text = ResGenerateAutoID().ToString();
-
-
-
 
                 using (MySqlConnection RSDBConnect = new MySqlConnection(dbcon.MyConnect()))
                 {
@@ -260,9 +257,7 @@ namespace VAWC_Recording_System.NewForms
 
 
                         RSDBCommand1.ExecuteNonQuery();
-                       
                     }
-
 
                     using (MySqlCommand RSDBCommand2 = new MySqlCommand("INSERT INTO respondent(respo_ID, caseNo, respo_LastName, respo_FirstName, respo_MiddleName, respo_Alias, respo_Sex, respo_Age, respo_CivilStatus, respo_EducationalAttainment, respo_Religion, respo_ContactNo, respo_Purok, respo_Barangay, respo_City, respo_Province, respo_Region, respo_RelationshipToVictim, respo_Nationality, respo_Occupation, respo_PassportID) VALUES (@respo_ID, @caseNo, @respo_LastName, @respo_FirstName, @respo_MiddleName, @respo_Alias, @respo_Sex, @respo_Age, @respo_CivilStatus, @respo_EducationalAttainment, @respo_Religion, @respo_ContactNo, @respo_Purok, @respo_Barangay, @respo_City, @respo_Province, @respo_Region, @respo_RelationshipToVictim, @respo_Nationality, @respo_Occupation, @respo_PassportID)", RSDBConnect))
                     {
@@ -293,71 +288,67 @@ namespace VAWC_Recording_System.NewForms
 
 
                         RSDBCommand2.ExecuteNonQuery();
-                      
+                        using (MySqlCommand RSDBCommand = new MySqlCommand("INSERT INTO caselist(caseNo, case_cLastName, case_cFirstName, case_cAge, case_ComplaintDate, case_rLastName, case_rFirstName, case_rAlias, case_Violation, case_SubViolation, case_ReferredTo, case_Status, case_Description, case_incidentDate, case_plcofincident, case_purok, case_barangay, case_municipality, case_province, case_region,case_respoIdentifyingMarks) VALUES (@caseNo, @case_cLastName, @case_cFirstName, @case_cAge, @case_ComplaintDate, @case_rLastName, @case_rFirstName, @case_rAlias, @case_Violation, @case_SubViolation, @case_ReferredTo, @case_Status, @case_Description, @case_incidentDate, @case_plcofincident, @case_purok, @case_barangay, @case_municipality, @case_province, @case_region, @case_respoIdentifyingMarks)", RSDBConnect))
+                        {
+                            RSDBCommand.Parameters.AddWithValue("@caseNo", CaseGenerateAutoID());
+                            RSDBCommand.Parameters.AddWithValue("@case_cLastName", string.IsNullOrEmpty(compLNtxtb.Text) ? (object)DBNull.Value : compLNtxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_cFirstName", string.IsNullOrEmpty(compFNtxtb.Text) ? (object)DBNull.Value : compFNtxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_cAge", string.IsNullOrEmpty(compAgetxtb.Text) ? DBNull.Value : (object)Convert.ToInt32(compAgetxtb.Text));
+
+                            DateTime CaseDateReported = complaintDate.Value;
+                            RSDBCommand.Parameters.AddWithValue("@case_ComplaintDate", CaseDateReported);
+
+                            RSDBCommand.Parameters.AddWithValue("@case_rLastName", string.IsNullOrEmpty(respoLNtxtb.Text) ? (object)DBNull.Value : respoLNtxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_rFirstName", string.IsNullOrEmpty(respoFNtxtb.Text) ? (object)DBNull.Value : respoFNtxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_rAlias", string.IsNullOrEmpty(respoAliastxtb.Text) ? (object)DBNull.Value : respoAliastxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_Violation", cmbxRA.SelectedItem?.ToString() ?? DBNull.Value.ToString());
+                            RSDBCommand.Parameters.AddWithValue("@case_SubViolation", cmbxVS.SelectedItem?.ToString() ?? DBNull.Value.ToString());
+                            RSDBCommand.Parameters.AddWithValue("@case_ReferredTo", referralTo_cmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
+                            RSDBCommand.Parameters.AddWithValue("@case_Status", casestatuscmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
+                            RSDBCommand.Parameters.AddWithValue("@case_Description", string.IsNullOrEmpty(description_txtbx.Text) ? (object)DBNull.Value : description_txtbx.Text);
+
+                            DateTime IncidentCaseDate = incidentDate.Value;
+                            RSDBCommand.Parameters.AddWithValue("@case_incidentDate", IncidentCaseDate);
+
+                            RSDBCommand.Parameters.AddWithValue("@case_plcofincident", plcofIncident_cmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
+                            RSDBCommand.Parameters.AddWithValue("@case_purok", string.IsNullOrEmpty(incidentPuroktxtb.Text) ? (object)DBNull.Value : incidentPuroktxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_barangay", string.IsNullOrEmpty(incidentBarangaytxtb.Text) ? (object)DBNull.Value : incidentBarangaytxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_municipality", string.IsNullOrEmpty(incidentCitytxtb.Text) ? (object)DBNull.Value : incidentCitytxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_province", string.IsNullOrEmpty(incidentProvince.Text) ? (object)DBNull.Value : incidentProvince.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_region", string.IsNullOrEmpty(incidentRegiontxtb.Text) ? (object)DBNull.Value : incidentRegiontxtb.Text);
+                            RSDBCommand.Parameters.AddWithValue("@case_respoIdentifyingMarks", string.IsNullOrEmpty(respo_IdentifyingMarks.Text) ? (object)DBNull.Value : respo_IdentifyingMarks.Text);
+
+                            RSDBCommand.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Successfully Added a Case");
+                        ClearTextBox();
+                        CompAutoID = CompGenerateAutoID();
+                        ResAutoID = ResGenerateAutoID();
+                        CaseAutoID = CaseGenerateAutoID();
+                        RSDBConnect.Close();
+
+                        //Carlos Code
+                        //label58.Text = CompAutoID.ToString();
+                        //label59.Text = ResAutoID.ToString();
+                        //label60.Text = CaseAutoID.ToString();
+
+                        label58.Text = CaseAutoID.ToString();
+                        label59.Text = CompAutoID.ToString();
+                        label60.Text = ResAutoID.ToString();
+
+
+                        //Referenceto Load Method
+                        //label58.Text = CaseGenerateAutoID().ToString();
+                        //label59.Text = CompGenerateAutoID().ToString();
+                        //label60.Text = ResGenerateAutoID().ToString();
+
                     }
-
-                    using (MySqlCommand RSDBCommand = new MySqlCommand("INSERT INTO caselist(caseNo, fcomp_ID, case_cLastName, case_cFirstName, case_cAge, frespo_ID, case_ComplaintDate, case_rLastName, case_rFirstName, case_rAlias, case_Violation, case_SubViolation, case_ReferredTo, case_Status, case_Description, case_incidentDate, case_plcofincident, case_purok, case_barangay, case_municipality, case_province, case_region,case_respoIdentifyingMarks) VALUES (@caseNo, @fcompID, @case_cLastName, @case_cFirstName, @case_cAge, @frespoID, @case_ComplaintDate, @case_rLastName, @case_rFirstName, @case_rAlias, @case_Violation, @case_SubViolation, @case_ReferredTo, @case_Status, @case_Description, @case_incidentDate, @case_plcofincident, @case_purok, @case_barangay, @case_municipality, @case_province, @case_region, @case_respoIdentifyingMarks)", RSDBConnect))
-                    {
-                        RSDBCommand.Parameters.AddWithValue("@caseNo", CaseGenerateAutoID());
-                        RSDBCommand.Parameters.AddWithValue("@fcompID", CompGenerateAutoID());
-                        RSDBCommand.Parameters.AddWithValue("@case_cLastName", string.IsNullOrEmpty(compLNtxtb.Text) ? (object)DBNull.Value : compLNtxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_cFirstName", string.IsNullOrEmpty(compFNtxtb.Text) ? (object)DBNull.Value : compFNtxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_cAge", string.IsNullOrEmpty(compAgetxtb.Text) ? DBNull.Value : (object)Convert.ToInt32(compAgetxtb.Text));
-                        RSDBCommand.Parameters.AddWithValue("@frespoID", ResGenerateAutoID());
-
-                        DateTime CaseDateReported = complaintDate.Value;
-                        RSDBCommand.Parameters.AddWithValue("@case_ComplaintDate", CaseDateReported);
-
-                        RSDBCommand.Parameters.AddWithValue("@case_rLastName", string.IsNullOrEmpty(respoLNtxtb.Text) ? (object)DBNull.Value : respoLNtxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_rFirstName", string.IsNullOrEmpty(respoFNtxtb.Text) ? (object)DBNull.Value : respoFNtxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_rAlias", string.IsNullOrEmpty(respoAliastxtb.Text) ? (object)DBNull.Value : respoAliastxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_Violation", cmbxRA.SelectedItem?.ToString() ?? DBNull.Value.ToString());
-                        RSDBCommand.Parameters.AddWithValue("@case_SubViolation", cmbxVS.SelectedItem?.ToString() ?? DBNull.Value.ToString());
-                        RSDBCommand.Parameters.AddWithValue("@case_ReferredTo", referralTo_cmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
-                        RSDBCommand.Parameters.AddWithValue("@case_Status", casestatuscmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
-                        RSDBCommand.Parameters.AddWithValue("@case_Description", string.IsNullOrEmpty(description_txtbx.Text) ? (object)DBNull.Value : description_txtbx.Text);
-
-                        DateTime IncidentCaseDate = incidentDate.Value;
-                        RSDBCommand.Parameters.AddWithValue("@case_incidentDate", IncidentCaseDate);
-
-                        RSDBCommand.Parameters.AddWithValue("@case_plcofincident", plcofIncident_cmbx.SelectedItem?.ToString() ?? DBNull.Value.ToString());
-                        RSDBCommand.Parameters.AddWithValue("@case_purok", string.IsNullOrEmpty(incidentPuroktxtb.Text) ? (object)DBNull.Value : incidentPuroktxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_barangay", string.IsNullOrEmpty(incidentBarangaytxtb.Text) ? (object)DBNull.Value : incidentBarangaytxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_municipality", string.IsNullOrEmpty(incidentCitytxtb.Text) ? (object)DBNull.Value : incidentCitytxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_province", string.IsNullOrEmpty(incidentProvince.Text) ? (object)DBNull.Value : incidentProvince.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_region", string.IsNullOrEmpty(incidentRegiontxtb.Text) ? (object)DBNull.Value : incidentRegiontxtb.Text);
-                        RSDBCommand.Parameters.AddWithValue("@case_respoIdentifyingMarks", string.IsNullOrEmpty(respo_IdentifyingMarks.Text) ? (object)DBNull.Value : respo_IdentifyingMarks.Text);
-
-                        RSDBCommand.ExecuteNonQuery();
-                       
-                    }
-
-                    MessageBox.Show("Successfully Added a Case");
-                    ClearTextBox();
-                    CompAutoID = CompGenerateAutoID();
-                    ResAutoID = ResGenerateAutoID();
-                    CaseAutoID = CaseGenerateAutoID();
-                    RSDBConnect.Close();
-
-                    //Carlos Code
-                    //label58.Text = CompAutoID.ToString();
-                    //label59.Text = ResAutoID.ToString();
-                    //label60.Text = CaseAutoID.ToString();
-
-                    label58.Text = CaseAutoID.ToString(); 
-                    label59.Text = CompAutoID.ToString();
-                    label60.Text = ResAutoID.ToString();
-
-
-                    //Referenceto Load Method
-                    //label58.Text = CaseGenerateAutoID().ToString();
-                    //label59.Text = CompGenerateAutoID().ToString();
-                    //label60.Text = ResGenerateAutoID().ToString();
 
                 }
-
             }
-            
+
+
 
             catch (Exception ex)
             {

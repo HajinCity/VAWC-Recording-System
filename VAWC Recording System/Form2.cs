@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VAWC_Recording_System.NewForms;
 
 namespace VAWC_Recording_System
 {
@@ -112,14 +113,9 @@ namespace VAWC_Recording_System
 
             if (userChoice == DialogResult.Yes)
             {
-                // Hide the current form (HomeForm)
                 this.Hide();
-
-                // Show the login form (Form1)
                 Form1 loginForm = new Form1();
-                loginForm.ShowDialog(); // Use ShowDialog to open the login form
-
-                // Close the current form (HomeForm) if needed
+                loginForm.ShowDialog();
                 this.Close();
             }
         }
@@ -132,6 +128,12 @@ namespace VAWC_Recording_System
         private void systemManagement_btn_Click(object sender, EventArgs e)
         {
             string userID = label5.Text; 
+            openingForm(new NewForms.SystemManagement(this, userID));
+        }
+
+        public void balikmode()
+        {
+            string userID = label5.Text;
             openingForm(new NewForms.SystemManagement(this, userID));
         }
 

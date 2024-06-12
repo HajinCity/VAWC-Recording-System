@@ -48,6 +48,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +63,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -64,11 +71,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bakbak One", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bakbak One", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 56);
+            this.label1.Size = new System.Drawing.Size(228, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "OVERVIEW";
             // 
@@ -95,7 +102,7 @@
             // 
             this.RA9262_Button.BackColor = System.Drawing.Color.Silver;
             this.RA9262_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA9262_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA9262_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9262_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9262_Button.Location = new System.Drawing.Point(32, 86);
             this.RA9262_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -110,7 +117,7 @@
             // 
             this.RA8353_Button.BackColor = System.Drawing.Color.Silver;
             this.RA8353_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA8353_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA8353_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA8353_Button.ForeColor = System.Drawing.Color.Black;
             this.RA8353_Button.Location = new System.Drawing.Point(213, 86);
             this.RA8353_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -125,7 +132,7 @@
             // 
             this.RA7877_Button.BackColor = System.Drawing.Color.Silver;
             this.RA7877_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA7877_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA7877_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA7877_Button.ForeColor = System.Drawing.Color.Black;
             this.RA7877_Button.Location = new System.Drawing.Point(396, 86);
             this.RA7877_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -140,7 +147,7 @@
             // 
             this.RA7610_Button.BackColor = System.Drawing.Color.Silver;
             this.RA7610_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA7610_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA7610_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA7610_Button.ForeColor = System.Drawing.Color.Black;
             this.RA7610_Button.Location = new System.Drawing.Point(579, 86);
             this.RA7610_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -155,7 +162,7 @@
             // 
             this.RA9208_Button.BackColor = System.Drawing.Color.Silver;
             this.RA9208_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA9208_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA9208_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9208_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9208_Button.Location = new System.Drawing.Point(761, 86);
             this.RA9208_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -170,7 +177,7 @@
             // 
             this.RA9775_Button.BackColor = System.Drawing.Color.Silver;
             this.RA9775_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA9775_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA9775_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9775_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9775_Button.Location = new System.Drawing.Point(943, 86);
             this.RA9775_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -185,7 +192,7 @@
             // 
             this.RA9995_Button.BackColor = System.Drawing.Color.Silver;
             this.RA9995_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RA9995_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RA9995_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9995_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9995_Button.Location = new System.Drawing.Point(1125, 86);
             this.RA9995_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -200,7 +207,7 @@
             // 
             this.RPC_Button.BackColor = System.Drawing.Color.Silver;
             this.RPC_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RPC_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RPC_Button.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RPC_Button.ForeColor = System.Drawing.Color.Black;
             this.RPC_Button.Location = new System.Drawing.Point(1308, 86);
             this.RPC_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -258,7 +265,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bakbak One", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(225, 11);
+            this.label10.Location = new System.Drawing.Point(236, 4);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 56);
@@ -289,7 +296,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 86);
+            this.label3.Location = new System.Drawing.Point(30, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 20);
             this.label3.TabIndex = 6;
@@ -298,11 +305,83 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.LightGray;
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label12);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Location = new System.Drawing.Point(740, 134);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(877, 145);
             this.panel7.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(338, 95);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(138, 40);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "SWM HOTLINE\r\n0912-197-7933";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(623, 75);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(150, 60);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "DULWA HOTLINE\r\n0919-454-8684\r\n0920-896-3914";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(623, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(146, 60);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "DSWD HOTLINE\r\n0920-867-8997\r\n0948-376-6317";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(17, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(150, 40);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "RHU HOTLINE\r\n0948-407-2220\r\n";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(338, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(149, 80);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "EOC HOTLINE\r\n0995-360-2234\r\n0906-852-5908\r\n0949-919-5080";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(17, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(219, 80);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Dumalinao Police Station\r\n0998-598-6810\r\n0966-399-9809\r\n0998-162-9225\r\n";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -319,7 +398,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bakbak One", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(225, 11);
+            this.label9.Location = new System.Drawing.Point(236, 4);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 56);
@@ -391,6 +470,8 @@
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -426,5 +507,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

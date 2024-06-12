@@ -172,7 +172,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 81);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Save a Case";
+            this.button1.Text = "SAVE A CASE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1168,7 +1168,7 @@
             // respo_IdentifyingMarks
             // 
             this.respo_IdentifyingMarks.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.respo_IdentifyingMarks.Location = new System.Drawing.Point(990, 579);
+            this.respo_IdentifyingMarks.Location = new System.Drawing.Point(1150, 551);
             this.respo_IdentifyingMarks.Margin = new System.Windows.Forms.Padding(4);
             this.respo_IdentifyingMarks.Multiline = true;
             this.respo_IdentifyingMarks.Name = "respo_IdentifyingMarks";
@@ -1179,7 +1179,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(798, 579);
+            this.label57.Location = new System.Drawing.Point(958, 551);
             this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(173, 24);
@@ -1189,7 +1189,7 @@
             // incidentRegiontxtb
             // 
             this.incidentRegiontxtb.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentRegiontxtb.Location = new System.Drawing.Point(990, 525);
+            this.incidentRegiontxtb.Location = new System.Drawing.Point(1150, 497);
             this.incidentRegiontxtb.Margin = new System.Windows.Forms.Padding(4);
             this.incidentRegiontxtb.Name = "incidentRegiontxtb";
             this.incidentRegiontxtb.Size = new System.Drawing.Size(115, 32);
@@ -1210,7 +1210,7 @@
             "Commercial Places",
             "No Response",
             "Others"});
-            this.plcofIncident_cmbx.Location = new System.Drawing.Point(990, 254);
+            this.plcofIncident_cmbx.Location = new System.Drawing.Point(1150, 226);
             this.plcofIncident_cmbx.Margin = new System.Windows.Forms.Padding(4);
             this.plcofIncident_cmbx.Name = "plcofIncident_cmbx";
             this.plcofIncident_cmbx.Size = new System.Drawing.Size(380, 32);
@@ -1219,7 +1219,7 @@
             // incidentProvince
             // 
             this.incidentProvince.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentProvince.Location = new System.Drawing.Point(990, 471);
+            this.incidentProvince.Location = new System.Drawing.Point(1150, 443);
             this.incidentProvince.Margin = new System.Windows.Forms.Padding(4);
             this.incidentProvince.Name = "incidentProvince";
             this.incidentProvince.Size = new System.Drawing.Size(380, 32);
@@ -1228,7 +1228,7 @@
             // incidentCitytxtb
             // 
             this.incidentCitytxtb.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentCitytxtb.Location = new System.Drawing.Point(990, 412);
+            this.incidentCitytxtb.Location = new System.Drawing.Point(1150, 384);
             this.incidentCitytxtb.Margin = new System.Windows.Forms.Padding(4);
             this.incidentCitytxtb.Name = "incidentCitytxtb";
             this.incidentCitytxtb.Size = new System.Drawing.Size(380, 32);
@@ -1238,7 +1238,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(798, 257);
+            this.label39.Location = new System.Drawing.Point(958, 229);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(169, 24);
@@ -1248,7 +1248,7 @@
             // incidentBarangaytxtb
             // 
             this.incidentBarangaytxtb.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentBarangaytxtb.Location = new System.Drawing.Point(990, 361);
+            this.incidentBarangaytxtb.Location = new System.Drawing.Point(1150, 333);
             this.incidentBarangaytxtb.Margin = new System.Windows.Forms.Padding(4);
             this.incidentBarangaytxtb.Name = "incidentBarangaytxtb";
             this.incidentBarangaytxtb.Size = new System.Drawing.Size(380, 32);
@@ -1257,7 +1257,7 @@
             // incidentDate
             // 
             this.incidentDate.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentDate.Location = new System.Drawing.Point(990, 204);
+            this.incidentDate.Location = new System.Drawing.Point(1150, 176);
             this.incidentDate.Margin = new System.Windows.Forms.Padding(4);
             this.incidentDate.Name = "incidentDate";
             this.incidentDate.Size = new System.Drawing.Size(380, 32);
@@ -1266,7 +1266,7 @@
             // incidentPuroktxtb
             // 
             this.incidentPuroktxtb.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentPuroktxtb.Location = new System.Drawing.Point(990, 312);
+            this.incidentPuroktxtb.Location = new System.Drawing.Point(1150, 284);
             this.incidentPuroktxtb.Margin = new System.Windows.Forms.Padding(4);
             this.incidentPuroktxtb.Name = "incidentPuroktxtb";
             this.incidentPuroktxtb.Size = new System.Drawing.Size(380, 32);
@@ -1276,7 +1276,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(798, 210);
+            this.label38.Location = new System.Drawing.Point(958, 182);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(136, 24);
@@ -1287,7 +1287,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(798, 528);
+            this.label40.Location = new System.Drawing.Point(958, 500);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(76, 24);
@@ -1302,7 +1302,7 @@
             "PNP",
             "MSWDO",
             "COURT"});
-            this.referralTo_cmbx.Location = new System.Drawing.Point(990, 155);
+            this.referralTo_cmbx.Location = new System.Drawing.Point(1150, 127);
             this.referralTo_cmbx.Margin = new System.Windows.Forms.Padding(4);
             this.referralTo_cmbx.Name = "referralTo_cmbx";
             this.referralTo_cmbx.Size = new System.Drawing.Size(380, 32);
@@ -1312,7 +1312,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(798, 474);
+            this.label41.Location = new System.Drawing.Point(958, 446);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(93, 24);
@@ -1327,7 +1327,7 @@
             "Pending",
             "Dismissed",
             "Stop"});
-            this.casestatuscmbx.Location = new System.Drawing.Point(990, 103);
+            this.casestatuscmbx.Location = new System.Drawing.Point(1150, 75);
             this.casestatuscmbx.Margin = new System.Windows.Forms.Padding(4);
             this.casestatuscmbx.Name = "casestatuscmbx";
             this.casestatuscmbx.Size = new System.Drawing.Size(380, 32);
@@ -1337,7 +1337,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(798, 415);
+            this.label42.Location = new System.Drawing.Point(958, 387);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(168, 24);
@@ -1348,7 +1348,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(798, 158);
+            this.label37.Location = new System.Drawing.Point(958, 130);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(113, 24);
@@ -1359,7 +1359,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(798, 364);
+            this.label43.Location = new System.Drawing.Point(958, 336);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(98, 24);
@@ -1370,7 +1370,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(798, 106);
+            this.label36.Location = new System.Drawing.Point(958, 78);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(124, 24);
@@ -1381,7 +1381,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(798, 315);
+            this.label44.Location = new System.Drawing.Point(958, 287);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(65, 24);
@@ -1391,18 +1391,18 @@
             // description_txtbx
             // 
             this.description_txtbx.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description_txtbx.Location = new System.Drawing.Point(164, 256);
+            this.description_txtbx.Location = new System.Drawing.Point(42, 229);
             this.description_txtbx.Margin = new System.Windows.Forms.Padding(4);
             this.description_txtbx.Multiline = true;
             this.description_txtbx.Name = "description_txtbx";
-            this.description_txtbx.Size = new System.Drawing.Size(585, 565);
+            this.description_txtbx.Size = new System.Drawing.Size(877, 564);
             this.description_txtbx.TabIndex = 8;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(160, 210);
+            this.label35.Location = new System.Drawing.Point(38, 182);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(224, 24);
@@ -1413,16 +1413,16 @@
             // 
             this.cmbxVS.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxVS.FormattingEnabled = true;
-            this.cmbxVS.Location = new System.Drawing.Point(430, 155);
+            this.cmbxVS.Location = new System.Drawing.Point(308, 124);
             this.cmbxVS.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxVS.Name = "cmbxVS";
-            this.cmbxVS.Size = new System.Drawing.Size(319, 32);
+            this.cmbxVS.Size = new System.Drawing.Size(227, 32);
             this.cmbxVS.TabIndex = 34;
             this.cmbxVS.SelectedIndexChanged += new System.EventHandler(this.cmbxVS_SelectedIndexChanged);
             // 
             // cmbxRA
             // 
-            this.cmbxRA.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxRA.Font = new System.Drawing.Font("Inter", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxRA.FormattingEnabled = true;
             this.cmbxRA.Items.AddRange(new object[] {
             "R.A. 9262: Anti Violence Against Women and their Children Act",
@@ -1434,10 +1434,10 @@
             "R.A. 9775: Anti-Child Pornography Act",
             "R.A. 9995: Anti-Photo and Video Act 2009",
             "Revised Penal Code"});
-            this.cmbxRA.Location = new System.Drawing.Point(430, 103);
+            this.cmbxRA.Location = new System.Drawing.Point(308, 75);
             this.cmbxRA.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxRA.Name = "cmbxRA";
-            this.cmbxRA.Size = new System.Drawing.Size(319, 32);
+            this.cmbxRA.Size = new System.Drawing.Size(611, 29);
             this.cmbxRA.TabIndex = 33;
             this.cmbxRA.SelectedIndexChanged += new System.EventHandler(this.cmbxRA_SelectedIndexChanged);
             // 
@@ -1445,7 +1445,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(160, 158);
+            this.label34.Location = new System.Drawing.Point(38, 127);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(240, 24);
@@ -1456,7 +1456,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(160, 111);
+            this.label33.Location = new System.Drawing.Point(38, 78);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(148, 24);
@@ -1467,7 +1467,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(160, 52);
+            this.label32.Location = new System.Drawing.Point(38, 27);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(128, 24);

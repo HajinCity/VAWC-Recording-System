@@ -44,7 +44,7 @@ namespace VAWC_Recording_System
                     Name = RSBDReader["firstName"].ToString();
                     Role = RSBDReader["role"].ToString();
                     users = RSBDReader["user_id"].ToString();
-                    MessageBox.Show("User found!");
+                    MessageBox.Show("Welome User " + Name);
 
                     Form2 newForm = new Form2();
                     newForm.StartPosition = FormStartPosition.CenterScreen;
@@ -71,27 +71,12 @@ namespace VAWC_Recording_System
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void close_button_Click(object sender, EventArgs e)
+        private void close_button_Click_1(object sender, EventArgs e)
         {
             DialogResult userChoice;
             userChoice = MessageBox.Show("Confirm if you want to close the app", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -103,10 +88,22 @@ namespace VAWC_Recording_System
             }
         }
 
-        private void minimize_button_Click(object sender, EventArgs e)
+        private void minimize_button_Click_1(object sender, EventArgs e)
         {
             // Minimize the form
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                password_txtbx.UseSystemPasswordChar=false;
+            }
+            else
+            {
+                password_txtbx.UseSystemPasswordChar = true;
+            }
         }
     }
 }

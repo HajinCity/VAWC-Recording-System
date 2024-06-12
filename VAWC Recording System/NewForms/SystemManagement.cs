@@ -60,13 +60,51 @@ namespace VAWC_Recording_System.NewForms
 
         private void label6_Click(object sender, EventArgs e)
         {
-            HandOrgForm handOrgForm = new HandOrgForm(userID);
+            
+            HandOrgForm handOrgForm = new HandOrgForm(f,userID);
             handOrgForm.TopLevel = false;
             handOrgForm.FormBorderStyle = FormBorderStyle.None;
             handOrgForm.Dock = DockStyle.Fill;
             panel2.Controls.Clear();
             panel2.Controls.Add(handOrgForm);
             handOrgForm.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            HandOrgForm handOrgForm = new HandOrgForm(f, userID);
+            handOrgForm.TopLevel = false;
+            handOrgForm.FormBorderStyle = FormBorderStyle.None;
+            handOrgForm.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(handOrgForm);
+            handOrgForm.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            UserSecurityForm userSecurityForm = new UserSecurityForm(userID);
+            userSecurityForm.TopLevel = false;
+            userSecurityForm.FormBorderStyle = FormBorderStyle.None;
+            userSecurityForm.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userSecurityForm);
+            userSecurityForm.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SystemManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

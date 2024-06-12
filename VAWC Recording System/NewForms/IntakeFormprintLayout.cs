@@ -25,30 +25,58 @@ namespace VAWC_Recording_System.NewForms
         {
             InitializeComponent();
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
+            handOrg();
         }
 
-        private void PrintPanelContents(Panel panel1, Panel panel60)
+        private void PrintPanelContents(TabControl tabControl, Panel panel1, Panel panel60, Panel panel74, bool includeReferralForm)
         {
             PrintDocument pd = new PrintDocument();
             int pageNumber = 0;
 
             pd.PrintPage += (sender, e) =>
             {
+                Bitmap bmp;
                 if (pageNumber == 0)
                 {
-                    Bitmap bmp = new Bitmap(panel1.Width, panel1.Height);
+                    // Print panel1
+                    tabControl.SelectedTab = tabControl.TabPages[0];
+                    panel1.Parent.PerformLayout();
+                    panel1.Parent.Update();
+
+                    bmp = new Bitmap(panel1.Width, panel1.Height);
                     panel1.DrawToBitmap(bmp, new Rectangle(0, 0, panel1.Width, panel1.Height));
-                    e.Graphics.DrawImage(bmp, Point.Empty);
                 }
                 else if (pageNumber == 1)
                 {
-                    Bitmap bmp = new Bitmap(panel60.Width, panel60.Height);
+                    // Print panel60
+                    tabControl.SelectedTab = tabControl.TabPages[1];
+                    panel60.Parent.PerformLayout();
+                    panel60.Parent.Update();
+
+                    bmp = new Bitmap(panel60.Width, panel60.Height);
                     panel60.DrawToBitmap(bmp, new Rectangle(0, 0, panel60.Width, panel60.Height));
-                    e.Graphics.DrawImage(bmp, Point.Empty);
+                }
+                else if (pageNumber == 2 && includeReferralForm)
+                {
+                    // Print panel74
+                    tabControl.SelectedTab = tabControl.TabPages[2];
+                    panel74.Parent.PerformLayout();
+                    panel74.Parent.Update();
+
+                    bmp = new Bitmap(panel74.Width, panel74.Height);
+                    panel74.DrawToBitmap(bmp, new Rectangle(0, 0, panel74.Width, panel74.Height));
+                }
+                else
+                {
+                    e.HasMorePages = false;
+                    return;
                 }
 
+                e.Graphics.DrawImage(bmp, Point.Empty);
+                bmp.Dispose();
+
                 pageNumber++;
-                e.HasMorePages = pageNumber < 2; // Set to the number of pages you have
+                e.HasMorePages = pageNumber < (includeReferralForm ? 3 : 2);
             };
 
             pd.BeginPrint += (sender, e) =>
@@ -56,14 +84,18 @@ namespace VAWC_Recording_System.NewForms
                 pageNumber = 0; // Reset the page number when printing starts
             };
 
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = pd;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = pd
+            };
             printPreviewDialog.ShowDialog();
         }
 
         private void PrintNow_Click(object sender, EventArgs e)
         {
-            PrintPanelContents(panel1, panel60);
+            DialogResult result = MessageBox.Show("Would you like to include the Referral Form on the print?", "Include Referral Form", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            bool includeReferralForm = (result == DialogResult.Yes);
+            PrintPanelContents(tabControl1, panel1, panel60, panel74, includeReferralForm);
         }
 
         private string GetCaseNumberFromDB(string typedCaseNo)
@@ -104,12 +136,53 @@ namespace VAWC_Recording_System.NewForms
             }
         }
 
+        private void handOrg()
+        {
+            string query = "SELECT * FROM organization";
+            RSDBCommand = new MySqlCommand(query, RSDBConnect);
+            RSDBConnect.Open();
+            RSBDReader = RSDBCommand.ExecuteReader();
+
+            while (RSBDReader.Read())
+            {
+
+                label113.Text = RSBDReader["h_orgName"].ToString();
+               // label16.Text = RSBDReader["h_orgPurok"].ToString();
+                label118.Text = RSBDReader["h_orgBaranggay"].ToString();
+                label117.Text = RSBDReader["h_orgMunicipality"].ToString();
+                label116.Text = RSBDReader["h_orgProvince"].ToString();
+                label115.Text = RSBDReader["h_orgRegion"].ToString();
+
+
+                label119.Text = RSBDReader["intake_lastName"].ToString();
+                label120.Text = RSBDReader["intake_firstName"].ToString();
+                label121.Text = RSBDReader["intake_middleName"].ToString();
+                label122.Text = RSBDReader["intake_Position"].ToString();
+
+                label123.Text = RSBDReader["casemanager_lastName"].ToString();
+                label124.Text = RSBDReader["casemanager_firstName"].ToString();
+                label125.Text = RSBDReader["casemanager_middleName"].ToString();
+
+            }
+
+            RSBDReader.Close();
+            RSDBConnect.Close();
+        }
+
+
         private void loadthesecase()
         {
             string typedCaseNo = textBox1.Text;
             string caseNoFromDB = caseno;
 
-           ResetFormFields();
+            // Check if the textbox is empty
+            if (string.IsNullOrWhiteSpace(typedCaseNo))
+            {
+                MessageBox.Show("Please enter a case number.");
+                return;
+            }
+
+            ResetFormFields();
             try
             {
 
@@ -640,20 +713,11 @@ namespace VAWC_Recording_System.NewForms
             }
             finally
             {
-                // Close the connection in the finally block to ensure it's always closed
+              
                 RSDBConnect.Close();
             }
         }
 
-       /** private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                loadthesecase();
-            }
-        }
-       */
-       
         private void ResetFormFields()
         {
             comp_middlename.Text = "";
@@ -686,13 +750,13 @@ namespace VAWC_Recording_System.NewForms
 
             compEd1.Checked = false;
             compEd2.Checked = false;
-            compEd3.Text = "";
-            compEd4.Text = "";
-            compEd5.Text = "";
-            compEd6.Text = "";
-            compEd7.Text = "";
-            compEd8.Text = "";
-            compEd9.Text = "";
+            compEd3.Checked = false;
+            compEd4.Checked = false;
+            compEd5.Checked = false;
+            compEd6.Checked = false;
+            compEd7.Checked = false;
+            compEd8.Checked = false;
+            compEd9.Checked = false;
 
             lbl_respoLN.Text = "";
             lbl_respoFN.Text = "";
@@ -708,47 +772,47 @@ namespace VAWC_Recording_System.NewForms
             lbl_respoOccupation.Text = "";
             lbl_respoPassportID.Text = "";
 
-            chkRespo_Male.Text = "";
-            chkRespo_Female.Text = "";
+            chkRespo_Male.Checked = false;
+            chkRespo_Female.Checked = false;
 
-            respo_StSingle.Text = "";
-            respo_StMarried.Text = "";
-            respo_StLivein.Text = "";
-            respo_StWidowed.Text = "";
-            respo_StSeparated.Text = "";
+            respo_StSingle.Checked = false;
+            respo_StMarried.Checked = false;
+            respo_StLivein.Checked = false;
+            respo_StWidowed.Checked = false;
+            respo_StSeparated.Checked = false;
 
-            respo_Religion1.Text = "";
-            respo_Religion2.Text = "";
-            respo_Religion3.Text = "";
-            respo_Religion4.Text = "";
-            respo_Religion5.Text = "";
-            respo_Religion6.Text = "";
+            respo_Religion1.Checked = false;
+            respo_Religion2.Checked = false;
+            respo_Religion3.Checked = false;
+            respo_Religion4.Checked = false;
+            respo_Religion5.Checked = false;
+            respo_Religion6.Checked = false;
             textBox12.Text = "";
 
 
-            respo_Ed1.Text = "";
-            respo_Ed2.Text = "";
-            respo_Ed3.Text = "";
-            respo_Ed4.Text = "";
-            respo_Ed5.Text = "";
-            respo_Ed6.Text = "";
-            respo_Ed7.Text = "";
-            respo_Ed8.Text = "";
-            respo_Ed9.Text = "";
+            respo_Ed1.Checked = false;
+            respo_Ed2.Checked = false;
+            respo_Ed3.Checked = false;
+            respo_Ed4.Checked = false;
+            respo_Ed5.Checked = false;
+            respo_Ed6.Checked = false;
+            respo_Ed7.Checked = false;
+            respo_Ed8.Checked = false;
+            respo_Ed9.Checked = false;
 
-            ropv1.Text = "";
-            ropv2.Text = "";
-            ropv3.Text = "";
-            ropv4.Text = "";
-            ropv5.Text = "";
-            ropv6.Text = "";
-            ropv7.Text = "";
-            ropv8.Text = "";
-            ropv9.Text = "";
-            ropv10.Text = "";
-            ropv11.Text = "";
-            ropv12.Text = "";
-            ropv13.Text = "";
+            ropv1.Checked = false;
+            ropv2.Checked = false;
+            ropv3.Checked = false;
+            ropv4.Checked = false;
+            ropv5.Checked = false;
+            ropv6.Checked = false;
+            ropv7.Checked = false;
+            ropv8.Checked = false;
+            ropv9.Checked = false;
+            ropv10.Checked = false;
+            ropv11.Checked = false;
+            ropv12.Checked = false;
+            ropv13.Checked = false;
 
             label143.Text = "";
             label129.Text = "";
@@ -760,51 +824,46 @@ namespace VAWC_Recording_System.NewForms
             caseRegion.Text = "";
             lblRespoIdentifyingMarks.Text = "";
 
-            plc1.Text = "";
-            plc2.Text = "";
-            plc3.Text = "";
-            plc4.Text = "";
-            plc5.Text = "";
-            plc6.Text = "";
-            plc7.Text = "";
-            plc8.Text = "";
-            plc9.Text = "";
-            plc10.Text = "";
+            plc1.Checked = false;
+            plc2.Checked = false;
+            plc3.Checked = false;
+            plc4.Checked = false;
+            plc5.Checked = false;
+            plc6.Checked = false;
+            plc7.Checked = false;
+            plc8.Checked = false;
+            plc9.Checked = false;
+            plc10.Checked = false;
 
-            RA1.Text = "";
-            RA9262sub1.Text = "";
-            RA9262sub2.Text = "";
-            RA9262sub3.Text = "";
-            RA9262sub4.Text = "";
-            RA9262sub5.Text = "";
+            RA1.Checked = false;
+            RA9262sub1.Checked = false;
+            RA9262sub2.Checked = false;
+            RA9262sub3.Checked = false;
+            RA9262sub4.Checked = false;
+            RA9262sub5.Checked = false;
 
-            RA2.Text = "";
-            RA8353sub1.Text = "";
-            RA8353sub2.Text = "";
+            RA2.Checked = false;
+            RA8353sub1.Checked = false;
+            RA8353sub2.Checked = false;
 
-            RA3.Text = "";
-            RA7877sub1.Text = "";
-            RA7877sub2.Text = "";
-            RA7877sub3.Text = "";
+            RA3.Checked = false;
+            RA7877sub1.Checked = false;
+            RA7877sub2.Checked = false;
+            RA7877sub3.Checked = false;
 
-            RA4.Text = "";
-            RA7610sub1.Text = "";
-            RA7610sub2.Text = "";
+            RA4.Checked = false;
+            RA7610sub1.Checked = false;
+            RA7610sub2.Checked = false;
 
-            RA5.Text = "";
-            RA6.Text = "";
-            RA7.Text = "";
+            RA5.Checked = false;
+            RA6.Checked = false;
+            RA7.Checked = false;
 
-            RA8.Text = "";
-            RPCsub1.Text = "";
-            RPCsub2.Text = "";
-
-
-
-
+            RA8.Checked = false;
+            RPCsub1.Checked = false;
+            RPCsub2.Checked = false;
 
         }
-      
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -812,6 +871,11 @@ namespace VAWC_Recording_System.NewForms
             {
                 loadthesecase();
             }
+        }
+
+        private void IntakeFormprintLayout_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

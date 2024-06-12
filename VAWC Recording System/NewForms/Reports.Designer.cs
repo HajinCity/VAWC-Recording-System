@@ -35,19 +35,19 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.cnt_9262 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cnt_phy = new System.Windows.Forms.Label();
+            this.cnt_9262_Physical = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cnt_xes = new System.Windows.Forms.Label();
+            this.cnt_9262_Sexual = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cnt_psy = new System.Windows.Forms.Label();
+            this.cnt_9262_Psychological = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cnt_eco = new System.Windows.Forms.Label();
+            this.cnt_9262_Economic = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cnt_8353 = new System.Windows.Forms.Label();
@@ -56,10 +56,11 @@
             this.cnt_9208 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.cnt_7877 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.cnt_othercases = new System.Windows.Forms.Label();
+            this.cnt_remaining = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,45 +76,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 25);
+            this.label1.Font = new System.Drawing.Font("Bakbak One", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 55);
+            this.label1.Size = new System.Drawing.Size(209, 68);
             this.label1.TabIndex = 0;
-            this.label1.Text = "REPORT";
+            this.label1.Text = "REPORTS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(323, 104);
+            this.label2.Font = new System.Drawing.Font("Inter", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 104);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "FROM";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(699, 104);
+            this.label3.Font = new System.Drawing.Font("Inter", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(445, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 20);
+            this.label3.Size = new System.Drawing.Size(35, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "TO";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1115, 108);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Font = new System.Drawing.Font("Inter SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1450, 104);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 70);
             this.button1.TabIndex = 3;
@@ -123,20 +125,20 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(186, 128);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Inter", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(35, 128);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(314, 28);
+            this.dateTimePicker1.Size = new System.Drawing.Size(385, 29);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(563, 128);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Inter", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(449, 128);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(293, 28);
+            this.dateTimePicker2.Size = new System.Drawing.Size(385, 29);
             this.dateTimePicker2.TabIndex = 7;
             // 
             // panel1
@@ -144,158 +146,158 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel1.Controls.Add(this.cnt_9262);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(15, 227);
+            this.panel1.Location = new System.Drawing.Point(35, 211);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 147);
+            this.panel1.Size = new System.Drawing.Size(385, 215);
             this.panel1.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 32);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "R.A. 9262";
             // 
             // cnt_9262
             // 
             this.cnt_9262.AutoSize = true;
-            this.cnt_9262.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_9262.Location = new System.Drawing.Point(213, 95);
+            this.cnt_9262.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9262.Location = new System.Drawing.Point(295, 114);
             this.cnt_9262.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cnt_9262.Name = "cnt_9262";
-            this.cnt_9262.Size = new System.Drawing.Size(24, 25);
+            this.cnt_9262.Size = new System.Drawing.Size(63, 80);
             this.cnt_9262.TabIndex = 9;
             this.cnt_9262.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 34);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "R.A. 9262";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel2.Controls.Add(this.cnt_phy);
+            this.panel2.Controls.Add(this.cnt_9262_Physical);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(289, 227);
+            this.panel2.Location = new System.Drawing.Point(449, 211);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(268, 147);
+            this.panel2.Size = new System.Drawing.Size(385, 215);
             this.panel2.TabIndex = 10;
             // 
-            // cnt_phy
+            // cnt_9262_Physical
             // 
-            this.cnt_phy.AutoSize = true;
-            this.cnt_phy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_phy.Location = new System.Drawing.Point(213, 95);
-            this.cnt_phy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cnt_phy.Name = "cnt_phy";
-            this.cnt_phy.Size = new System.Drawing.Size(24, 25);
-            this.cnt_phy.TabIndex = 9;
-            this.cnt_phy.Text = "0";
+            this.cnt_9262_Physical.AutoSize = true;
+            this.cnt_9262_Physical.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9262_Physical.Location = new System.Drawing.Point(285, 114);
+            this.cnt_9262_Physical.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cnt_9262_Physical.Name = "cnt_9262_Physical";
+            this.cnt_9262_Physical.Size = new System.Drawing.Size(63, 80);
+            this.cnt_9262_Physical.TabIndex = 9;
+            this.cnt_9262_Physical.Text = "0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(14, 14);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 32);
+            this.label7.Size = new System.Drawing.Size(158, 34);
             this.label7.TabIndex = 9;
             this.label7.Text = "PHYSICAL";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel3.Controls.Add(this.cnt_xes);
+            this.panel3.Controls.Add(this.cnt_9262_Sexual);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(563, 227);
+            this.panel3.Location = new System.Drawing.Point(865, 211);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(268, 147);
+            this.panel3.Size = new System.Drawing.Size(385, 215);
             this.panel3.TabIndex = 11;
             // 
-            // cnt_xes
+            // cnt_9262_Sexual
             // 
-            this.cnt_xes.AutoSize = true;
-            this.cnt_xes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_xes.Location = new System.Drawing.Point(213, 95);
-            this.cnt_xes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cnt_xes.Name = "cnt_xes";
-            this.cnt_xes.Size = new System.Drawing.Size(24, 25);
-            this.cnt_xes.TabIndex = 9;
-            this.cnt_xes.Text = "0";
+            this.cnt_9262_Sexual.AutoSize = true;
+            this.cnt_9262_Sexual.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9262_Sexual.Location = new System.Drawing.Point(287, 114);
+            this.cnt_9262_Sexual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cnt_9262_Sexual.Name = "cnt_9262_Sexual";
+            this.cnt_9262_Sexual.Size = new System.Drawing.Size(63, 80);
+            this.cnt_9262_Sexual.TabIndex = 9;
+            this.cnt_9262_Sexual.Text = "0";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(14, 14);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 32);
+            this.label9.Size = new System.Drawing.Size(127, 34);
             this.label9.TabIndex = 9;
             this.label9.Text = "SEXUAL";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel4.Controls.Add(this.cnt_psy);
+            this.panel4.Controls.Add(this.cnt_9262_Psychological);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Location = new System.Drawing.Point(838, 227);
+            this.panel4.Location = new System.Drawing.Point(1279, 211);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(293, 147);
+            this.panel4.Size = new System.Drawing.Size(385, 215);
             this.panel4.TabIndex = 12;
             // 
-            // cnt_psy
+            // cnt_9262_Psychological
             // 
-            this.cnt_psy.AutoSize = true;
-            this.cnt_psy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_psy.Location = new System.Drawing.Point(236, 95);
-            this.cnt_psy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cnt_psy.Name = "cnt_psy";
-            this.cnt_psy.Size = new System.Drawing.Size(24, 25);
-            this.cnt_psy.TabIndex = 9;
-            this.cnt_psy.Text = "0";
+            this.cnt_9262_Psychological.AutoSize = true;
+            this.cnt_9262_Psychological.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9262_Psychological.Location = new System.Drawing.Point(291, 114);
+            this.cnt_9262_Psychological.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cnt_9262_Psychological.Name = "cnt_9262_Psychological";
+            this.cnt_9262_Psychological.Size = new System.Drawing.Size(63, 80);
+            this.cnt_9262_Psychological.TabIndex = 9;
+            this.cnt_9262_Psychological.Text = "0";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(14, 14);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(268, 32);
+            this.label11.Size = new System.Drawing.Size(258, 34);
             this.label11.TabIndex = 9;
             this.label11.Text = "PSYCHOLOGICAL";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel5.Controls.Add(this.cnt_eco);
+            this.panel5.Controls.Add(this.cnt_9262_Economic);
             this.panel5.Controls.Add(this.label13);
-            this.panel5.Location = new System.Drawing.Point(1140, 227);
+            this.panel5.Location = new System.Drawing.Point(35, 461);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(268, 147);
+            this.panel5.Size = new System.Drawing.Size(385, 215);
             this.panel5.TabIndex = 12;
             // 
-            // cnt_eco
+            // cnt_9262_Economic
             // 
-            this.cnt_eco.AutoSize = true;
-            this.cnt_eco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_eco.Location = new System.Drawing.Point(213, 95);
-            this.cnt_eco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cnt_eco.Name = "cnt_eco";
-            this.cnt_eco.Size = new System.Drawing.Size(24, 25);
-            this.cnt_eco.TabIndex = 9;
-            this.cnt_eco.Text = "0";
+            this.cnt_9262_Economic.AutoSize = true;
+            this.cnt_9262_Economic.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9262_Economic.Location = new System.Drawing.Point(295, 118);
+            this.cnt_9262_Economic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cnt_9262_Economic.Name = "cnt_9262_Economic";
+            this.cnt_9262_Economic.Size = new System.Drawing.Size(63, 80);
+            this.cnt_9262_Economic.TabIndex = 9;
+            this.cnt_9262_Economic.Text = "0";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 14);
+            this.label13.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(14, 13);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(175, 32);
+            this.label13.Size = new System.Drawing.Size(173, 34);
             this.label13.TabIndex = 9;
             this.label13.Text = "ECONOMIC";
             // 
@@ -304,30 +306,30 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel6.Controls.Add(this.cnt_8353);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(15, 398);
+            this.panel6.Location = new System.Drawing.Point(449, 461);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(268, 147);
+            this.panel6.Size = new System.Drawing.Size(385, 215);
             this.panel6.TabIndex = 10;
             // 
             // cnt_8353
             // 
             this.cnt_8353.AutoSize = true;
-            this.cnt_8353.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_8353.Location = new System.Drawing.Point(213, 95);
+            this.cnt_8353.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_8353.Location = new System.Drawing.Point(285, 118);
             this.cnt_8353.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cnt_8353.Name = "cnt_8353";
-            this.cnt_8353.Size = new System.Drawing.Size(24, 25);
+            this.cnt_8353.Size = new System.Drawing.Size(63, 80);
             this.cnt_8353.TabIndex = 9;
             this.cnt_8353.Text = "0";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(14, 14);
+            this.label15.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 13);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(157, 64);
+            this.label15.Size = new System.Drawing.Size(156, 68);
             this.label15.TabIndex = 9;
             this.label15.Text = "R.A. 8353 \r\n(RAPE)";
             // 
@@ -336,94 +338,106 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel7.Controls.Add(this.cnt_9208);
             this.panel7.Controls.Add(this.label17);
-            this.panel7.Location = new System.Drawing.Point(289, 398);
+            this.panel7.Location = new System.Drawing.Point(865, 461);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(327, 147);
+            this.panel7.Size = new System.Drawing.Size(385, 215);
             this.panel7.TabIndex = 11;
             // 
             // cnt_9208
             // 
             this.cnt_9208.AutoSize = true;
-            this.cnt_9208.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_9208.Location = new System.Drawing.Point(269, 95);
+            this.cnt_9208.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_9208.Location = new System.Drawing.Point(287, 118);
             this.cnt_9208.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cnt_9208.Name = "cnt_9208";
-            this.cnt_9208.Size = new System.Drawing.Size(24, 25);
+            this.cnt_9208.Size = new System.Drawing.Size(63, 80);
             this.cnt_9208.TabIndex = 9;
             this.cnt_9208.Text = "0";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(9, 13);
+            this.label17.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(14, 13);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(307, 64);
+            this.label17.Size = new System.Drawing.Size(306, 68);
             this.label17.TabIndex = 9;
             this.label17.Text = "R.A. 9208\n(ANTI-TRAFFICKING)";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.cnt_7877);
             this.panel8.Controls.Add(this.label19);
-            this.panel8.Location = new System.Drawing.Point(622, 398);
+            this.panel8.Location = new System.Drawing.Point(1279, 461);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(381, 147);
+            this.panel8.Size = new System.Drawing.Size(385, 215);
             this.panel8.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Inter", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 51);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(317, 30);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "(SEXUAL HARASSMENT)";
             // 
             // cnt_7877
             // 
             this.cnt_7877.AutoSize = true;
-            this.cnt_7877.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_7877.Location = new System.Drawing.Point(319, 95);
+            this.cnt_7877.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_7877.Location = new System.Drawing.Point(291, 118);
             this.cnt_7877.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cnt_7877.Name = "cnt_7877";
-            this.cnt_7877.Size = new System.Drawing.Size(24, 25);
+            this.cnt_7877.Size = new System.Drawing.Size(63, 80);
             this.cnt_7877.TabIndex = 9;
             this.cnt_7877.Text = "0";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(9, 13);
+            this.label19.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(14, 13);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(365, 64);
+            this.label19.Size = new System.Drawing.Size(147, 34);
             this.label19.TabIndex = 9;
-            this.label19.Text = "R.A. 7877\n(SEXUAL HARASSMENT)";
+            this.label19.Text = "R.A. 7877";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel9.Controls.Add(this.cnt_othercases);
+            this.panel9.Controls.Add(this.cnt_remaining);
             this.panel9.Controls.Add(this.label21);
-            this.panel9.Location = new System.Drawing.Point(15, 568);
+            this.panel9.Location = new System.Drawing.Point(35, 717);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(268, 147);
+            this.panel9.Size = new System.Drawing.Size(385, 215);
             this.panel9.TabIndex = 11;
             // 
-            // cnt_othercases
+            // cnt_remaining
             // 
-            this.cnt_othercases.AutoSize = true;
-            this.cnt_othercases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnt_othercases.Location = new System.Drawing.Point(213, 95);
-            this.cnt_othercases.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cnt_othercases.Name = "cnt_othercases";
-            this.cnt_othercases.Size = new System.Drawing.Size(24, 25);
-            this.cnt_othercases.TabIndex = 9;
-            this.cnt_othercases.Text = "0";
+            this.cnt_remaining.AutoSize = true;
+            this.cnt_remaining.Font = new System.Drawing.Font("Bakbak One", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnt_remaining.Location = new System.Drawing.Point(295, 116);
+            this.cnt_remaining.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cnt_remaining.Name = "cnt_remaining";
+            this.cnt_remaining.Size = new System.Drawing.Size(63, 80);
+            this.cnt_remaining.TabIndex = 9;
+            this.cnt_remaining.Text = "0";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(14, 14);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(226, 32);
+            this.label21.Size = new System.Drawing.Size(213, 34);
             this.label21.TabIndex = 9;
             this.label21.Text = "OTHER CASES";
             // 
@@ -433,7 +447,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1432, 1102);
+            this.ClientSize = new System.Drawing.Size(1700, 1102);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -450,7 +464,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
@@ -489,16 +503,16 @@
         private System.Windows.Forms.Label cnt_9262;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label cnt_phy;
+        private System.Windows.Forms.Label cnt_9262_Physical;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label cnt_xes;
+        private System.Windows.Forms.Label cnt_9262_Sexual;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label cnt_psy;
+        private System.Windows.Forms.Label cnt_9262_Psychological;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label cnt_eco;
+        private System.Windows.Forms.Label cnt_9262_Economic;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label cnt_8353;
@@ -510,7 +524,8 @@
         private System.Windows.Forms.Label cnt_7877;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label cnt_othercases;
+        private System.Windows.Forms.Label cnt_remaining;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label5;
     }
 }

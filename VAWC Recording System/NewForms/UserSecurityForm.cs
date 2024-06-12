@@ -66,24 +66,24 @@ namespace VAWC_Recording_System.NewForms
             try
             {
                 RSDBConnect.Open();
-                string query = "SELECT * FROM users";
+                string query = "SELECT * FROM users WHERE user_id >= @startUserId";
                 RSDBCommand = new MySqlCommand(query, RSDBConnect);
+                RSDBCommand.Parameters.AddWithValue("@startUserId", 4100);
+
+                RSBDReader = RSDBCommand.ExecuteReader();
                 {
-                    RSBDReader = RSDBCommand.ExecuteReader();
+                    dataGridView1.Rows.Clear();
+
+                    while (RSBDReader.Read())
                     {
-                        dataGridView1.Rows.Clear();
+                        string column1Value = RSBDReader["user_id"]?.ToString() ?? "";
+                        string column2Value = RSBDReader["user"]?.ToString() ?? "";
+                        string column3Value = RSBDReader["lastName"]?.ToString() ?? "";
+                        string column4Value = RSBDReader["firstName"]?.ToString() ?? "";
+                        string column5Value = RSBDReader["middleName"]?.ToString() ?? "";
+                        string column6Value = RSBDReader["status"]?.ToString() ?? "";
 
-                        while (RSBDReader.Read())
-                        {
-                            string column1Value = RSBDReader["user_id"]?.ToString() ?? "";
-                            string column2Value = RSBDReader["user"]?.ToString() ?? "";
-                            string column3Value = RSBDReader["lastName"]?.ToString() ?? "";
-                            string column4Value = RSBDReader["firstName"]?.ToString() ?? "";
-                            string column5Value = RSBDReader["middleName"]?.ToString() ?? "";
-                            
-
-                            dataGridView1.Rows.Add(column1Value, column2Value, column3Value, column4Value, column5Value);
-                        }
+                        dataGridView1.Rows.Add(column1Value, column2Value, column3Value, column4Value, column5Value, column6Value);
                     }
                 }
             }
@@ -99,6 +99,7 @@ namespace VAWC_Recording_System.NewForms
                 }
             }
         }
+
 
 
         private void UserSecurityForm_Load(object sender, EventArgs e)
@@ -215,6 +216,11 @@ namespace VAWC_Recording_System.NewForms
                 frmChangePass openform = new frmChangePass(userID);
                 openform.ShowDialog();
             }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

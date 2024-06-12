@@ -153,10 +153,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(18, 154);
+            this.tabControl1.Location = new System.Drawing.Point(32, 193);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1065, 774);
+            this.tabControl1.Size = new System.Drawing.Size(1420, 953);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -165,10 +166,11 @@
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1057, 737);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1412, 911);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Complainant";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -217,9 +219,11 @@
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(519, 26);
+            this.groupBox2.Location = new System.Drawing.Point(692, 32);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(499, 673);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(665, 828);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Respondent";
@@ -237,18 +241,20 @@
             "Senior High Level/Graduate",
             "Post Graduate",
             "Others"});
-            this.upcmbx_resEdAtt.Location = new System.Drawing.Point(169, 274);
+            this.upcmbx_resEdAtt.Location = new System.Drawing.Point(225, 337);
+            this.upcmbx_resEdAtt.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_resEdAtt.Name = "upcmbx_resEdAtt";
-            this.upcmbx_resEdAtt.Size = new System.Drawing.Size(254, 24);
+            this.upcmbx_resEdAtt.Size = new System.Drawing.Size(337, 27);
             this.upcmbx_resEdAtt.TabIndex = 74;
             // 
             // label53
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(21, 278);
+            this.label53.Location = new System.Drawing.Point(28, 342);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(142, 16);
+            this.label53.Size = new System.Drawing.Size(168, 19);
             this.label53.TabIndex = 73;
             this.label53.Text = "Education Attainment";
             // 
@@ -261,18 +267,20 @@
             "Separated",
             "Married",
             "Widowed"});
-            this.upcmbx_resCstatus.Location = new System.Drawing.Point(169, 247);
+            this.upcmbx_resCstatus.Location = new System.Drawing.Point(225, 304);
+            this.upcmbx_resCstatus.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_resCstatus.Name = "upcmbx_resCstatus";
-            this.upcmbx_resCstatus.Size = new System.Drawing.Size(254, 24);
+            this.upcmbx_resCstatus.Size = new System.Drawing.Size(337, 27);
             this.upcmbx_resCstatus.TabIndex = 72;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(21, 255);
+            this.label54.Location = new System.Drawing.Point(28, 314);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(77, 16);
+            this.label54.Size = new System.Drawing.Size(91, 19);
             this.label54.TabIndex = 71;
             this.label54.Text = "Civil Status";
             // 
@@ -280,9 +288,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 609);
+            this.label3.Location = new System.Drawing.Point(33, 750);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 16);
+            this.label3.Size = new System.Drawing.Size(122, 19);
             this.label3.TabIndex = 70;
             this.label3.Text = "(If non-Filipino)";
             // 
@@ -290,62 +299,69 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(25, 588);
+            this.label50.Location = new System.Drawing.Point(33, 724);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(88, 16);
+            this.label50.Size = new System.Drawing.Size(105, 19);
             this.label50.TabIndex = 69;
             this.label50.Text = "Passport No.";
             // 
             // uptxtbx_resPassportId
             // 
             this.uptxtbx_resPassportId.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resPassportId.Location = new System.Drawing.Point(142, 585);
+            this.uptxtbx_resPassportId.Location = new System.Drawing.Point(189, 720);
+            this.uptxtbx_resPassportId.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resPassportId.Name = "uptxtbx_resPassportId";
-            this.uptxtbx_resPassportId.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resPassportId.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resPassportId.TabIndex = 68;
             // 
             // uptxtbx_resOccupation
             // 
             this.uptxtbx_resOccupation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resOccupation.Location = new System.Drawing.Point(142, 557);
+            this.uptxtbx_resOccupation.Location = new System.Drawing.Point(189, 686);
+            this.uptxtbx_resOccupation.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resOccupation.Name = "uptxtbx_resOccupation";
-            this.uptxtbx_resOccupation.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resOccupation.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resOccupation.TabIndex = 66;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(25, 563);
+            this.label51.Location = new System.Drawing.Point(33, 693);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 16);
+            this.label51.Size = new System.Drawing.Size(92, 19);
             this.label51.TabIndex = 67;
             this.label51.Text = "Occupation";
             // 
             // uptxtbx_resNationality
             // 
             this.uptxtbx_resNationality.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resNationality.Location = new System.Drawing.Point(142, 527);
+            this.uptxtbx_resNationality.Location = new System.Drawing.Point(189, 649);
+            this.uptxtbx_resNationality.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resNationality.Name = "uptxtbx_resNationality";
-            this.uptxtbx_resNationality.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resNationality.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resNationality.TabIndex = 64;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(25, 533);
+            this.label52.Location = new System.Drawing.Point(33, 656);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(74, 16);
+            this.label52.Size = new System.Drawing.Size(87, 19);
             this.label52.TabIndex = 65;
             this.label52.Text = "Nationality";
             // 
             // r_IDlbl
             // 
             this.r_IDlbl.AutoSize = true;
-            this.r_IDlbl.Location = new System.Drawing.Point(156, 28);
+            this.r_IDlbl.Location = new System.Drawing.Point(208, 34);
+            this.r_IDlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.r_IDlbl.Name = "r_IDlbl";
-            this.r_IDlbl.Size = new System.Drawing.Size(15, 16);
+            this.r_IDlbl.Size = new System.Drawing.Size(19, 19);
             this.r_IDlbl.TabIndex = 63;
             this.r_IDlbl.Text = "0";
             // 
@@ -353,9 +369,10 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(25, 624);
+            this.label31.Location = new System.Drawing.Point(33, 789);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(184, 16);
+            this.label31.Size = new System.Drawing.Size(216, 19);
             this.label31.TabIndex = 62;
             this.label31.Text = "Relationship to Complainant";
             // 
@@ -375,26 +392,29 @@
             "Agent of the Employer",
             "People of Authority/Service Provider",
             "Family"});
-            this.upcmbx_resRelationship.Location = new System.Drawing.Point(142, 643);
+            this.upcmbx_resRelationship.Location = new System.Drawing.Point(257, 789);
+            this.upcmbx_resRelationship.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_resRelationship.Name = "upcmbx_resRelationship";
-            this.upcmbx_resRelationship.Size = new System.Drawing.Size(281, 24);
+            this.upcmbx_resRelationship.Size = new System.Drawing.Size(373, 27);
             this.upcmbx_resRelationship.TabIndex = 61;
             // 
             // uptxtbx_resAlias
             // 
             this.uptxtbx_resAlias.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resAlias.Location = new System.Drawing.Point(142, 161);
+            this.uptxtbx_resAlias.Location = new System.Drawing.Point(189, 198);
+            this.uptxtbx_resAlias.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resAlias.Name = "uptxtbx_resAlias";
-            this.uptxtbx_resAlias.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resAlias.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resAlias.TabIndex = 60;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(25, 167);
+            this.label30.Location = new System.Drawing.Point(33, 206);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 16);
+            this.label30.Size = new System.Drawing.Size(42, 19);
             this.label30.TabIndex = 59;
             this.label30.Text = "Alias";
             // 
@@ -404,110 +424,123 @@
             this.upcmbx_resSx.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.upcmbx_resSx.Location = new System.Drawing.Point(142, 189);
+            this.upcmbx_resSx.Location = new System.Drawing.Point(189, 233);
+            this.upcmbx_resSx.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_resSx.Name = "upcmbx_resSx";
-            this.upcmbx_resSx.Size = new System.Drawing.Size(67, 24);
+            this.upcmbx_resSx.Size = new System.Drawing.Size(88, 27);
             this.upcmbx_resSx.TabIndex = 58;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(25, 197);
+            this.label17.Location = new System.Drawing.Point(33, 242);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 16);
+            this.label17.Size = new System.Drawing.Size(37, 19);
             this.label17.TabIndex = 57;
             this.label17.Text = "Sex";
             // 
             // uptxtbx_resRegion
             // 
             this.uptxtbx_resRegion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resRegion.Location = new System.Drawing.Point(142, 498);
+            this.uptxtbx_resRegion.Location = new System.Drawing.Point(189, 613);
+            this.uptxtbx_resRegion.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resRegion.Name = "uptxtbx_resRegion";
-            this.uptxtbx_resRegion.Size = new System.Drawing.Size(67, 22);
+            this.uptxtbx_resRegion.Size = new System.Drawing.Size(88, 26);
             this.uptxtbx_resRegion.TabIndex = 56;
             // 
             // uptxtbx_resProvince
             // 
             this.uptxtbx_resProvince.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resProvince.Location = new System.Drawing.Point(142, 466);
+            this.uptxtbx_resProvince.Location = new System.Drawing.Point(189, 574);
+            this.uptxtbx_resProvince.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resProvince.Name = "uptxtbx_resProvince";
-            this.uptxtbx_resProvince.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resProvince.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resProvince.TabIndex = 55;
             // 
             // uptxtbx_resCity
             // 
             this.uptxtbx_resCity.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resCity.Location = new System.Drawing.Point(142, 433);
+            this.uptxtbx_resCity.Location = new System.Drawing.Point(189, 533);
+            this.uptxtbx_resCity.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resCity.Name = "uptxtbx_resCity";
-            this.uptxtbx_resCity.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resCity.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resCity.TabIndex = 54;
             // 
             // uptxtbx_resBarangay
             // 
             this.uptxtbx_resBarangay.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resBarangay.Location = new System.Drawing.Point(142, 402);
+            this.uptxtbx_resBarangay.Location = new System.Drawing.Point(189, 495);
+            this.uptxtbx_resBarangay.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resBarangay.Name = "uptxtbx_resBarangay";
-            this.uptxtbx_resBarangay.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resBarangay.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resBarangay.TabIndex = 53;
             // 
             // uptxtbx_resPurok
             // 
             this.uptxtbx_resPurok.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resPurok.Location = new System.Drawing.Point(142, 368);
+            this.uptxtbx_resPurok.Location = new System.Drawing.Point(189, 453);
+            this.uptxtbx_resPurok.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resPurok.Name = "uptxtbx_resPurok";
-            this.uptxtbx_resPurok.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_resPurok.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_resPurok.TabIndex = 52;
             // 
             // uptxtbx_resRelgion
             // 
             this.uptxtbx_resRelgion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resRelgion.Location = new System.Drawing.Point(142, 306);
+            this.uptxtbx_resRelgion.Location = new System.Drawing.Point(189, 377);
+            this.uptxtbx_resRelgion.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resRelgion.Name = "uptxtbx_resRelgion";
-            this.uptxtbx_resRelgion.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resRelgion.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resRelgion.TabIndex = 51;
             // 
             // uptxtbx_resAge
             // 
             this.uptxtbx_resAge.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resAge.Location = new System.Drawing.Point(142, 219);
+            this.uptxtbx_resAge.Location = new System.Drawing.Point(189, 270);
+            this.uptxtbx_resAge.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resAge.Name = "uptxtbx_resAge";
-            this.uptxtbx_resAge.Size = new System.Drawing.Size(67, 22);
+            this.uptxtbx_resAge.Size = new System.Drawing.Size(88, 26);
             this.uptxtbx_resAge.TabIndex = 50;
             this.uptxtbx_resAge.TextChanged += new System.EventHandler(this.uptxtbx_resAge_TextChanged);
             // 
             // uptxtbx_resContact
             // 
             this.uptxtbx_resContact.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resContact.Location = new System.Drawing.Point(142, 340);
+            this.uptxtbx_resContact.Location = new System.Drawing.Point(189, 418);
+            this.uptxtbx_resContact.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resContact.Name = "uptxtbx_resContact";
-            this.uptxtbx_resContact.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resContact.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resContact.TabIndex = 49;
             this.uptxtbx_resContact.TextChanged += new System.EventHandler(this.uptxtbx_resContact_TextChanged);
             // 
             // uptxtbx_resMN
             // 
             this.uptxtbx_resMN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resMN.Location = new System.Drawing.Point(142, 129);
+            this.uptxtbx_resMN.Location = new System.Drawing.Point(189, 159);
+            this.uptxtbx_resMN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resMN.Name = "uptxtbx_resMN";
-            this.uptxtbx_resMN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resMN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resMN.TabIndex = 48;
             // 
             // uptxtbx_resFN
             // 
             this.uptxtbx_resFN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resFN.Location = new System.Drawing.Point(142, 101);
+            this.uptxtbx_resFN.Location = new System.Drawing.Point(189, 124);
+            this.uptxtbx_resFN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resFN.Name = "uptxtbx_resFN";
-            this.uptxtbx_resFN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resFN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resFN.TabIndex = 47;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(25, 504);
+            this.label18.Location = new System.Drawing.Point(33, 620);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 16);
+            this.label18.Size = new System.Drawing.Size(59, 19);
             this.label18.TabIndex = 46;
             this.label18.Text = "Region";
             // 
@@ -515,9 +548,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(25, 472);
+            this.label19.Location = new System.Drawing.Point(33, 581);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 16);
+            this.label19.Size = new System.Drawing.Size(72, 19);
             this.label19.TabIndex = 45;
             this.label19.Text = "Province";
             // 
@@ -525,9 +559,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(25, 439);
+            this.label20.Location = new System.Drawing.Point(33, 540);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 16);
+            this.label20.Size = new System.Drawing.Size(129, 19);
             this.label20.TabIndex = 44;
             this.label20.Text = "Municipality/City";
             // 
@@ -535,9 +570,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(25, 408);
+            this.label21.Location = new System.Drawing.Point(33, 502);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 16);
+            this.label21.Size = new System.Drawing.Size(79, 19);
             this.label21.TabIndex = 43;
             this.label21.Text = "Barangay";
             // 
@@ -545,9 +581,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(25, 374);
+            this.label22.Location = new System.Drawing.Point(33, 460);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(43, 16);
+            this.label22.Size = new System.Drawing.Size(52, 19);
             this.label22.TabIndex = 42;
             this.label22.Text = "Purok";
             // 
@@ -555,9 +592,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(25, 312);
+            this.label23.Location = new System.Drawing.Point(33, 384);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(56, 16);
+            this.label23.Size = new System.Drawing.Size(65, 19);
             this.label23.TabIndex = 41;
             this.label23.Text = "Religion";
             // 
@@ -565,9 +603,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(25, 343);
+            this.label24.Location = new System.Drawing.Point(33, 422);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(81, 16);
+            this.label24.Size = new System.Drawing.Size(99, 19);
             this.label24.TabIndex = 40;
             this.label24.Text = "Contact No.";
             // 
@@ -575,9 +614,10 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(25, 225);
+            this.label25.Location = new System.Drawing.Point(33, 277);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 16);
+            this.label25.Size = new System.Drawing.Size(37, 19);
             this.label25.TabIndex = 39;
             this.label25.Text = "Age";
             // 
@@ -585,27 +625,30 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(25, 107);
+            this.label26.Location = new System.Drawing.Point(33, 132);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 16);
+            this.label26.Size = new System.Drawing.Size(90, 19);
             this.label26.TabIndex = 38;
             this.label26.Text = "First Name";
             // 
             // uptxtbx_resLN
             // 
             this.uptxtbx_resLN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_resLN.Location = new System.Drawing.Point(142, 70);
+            this.uptxtbx_resLN.Location = new System.Drawing.Point(189, 86);
+            this.uptxtbx_resLN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_resLN.Name = "uptxtbx_resLN";
-            this.uptxtbx_resLN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_resLN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_resLN.TabIndex = 37;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(25, 139);
+            this.label27.Location = new System.Drawing.Point(33, 171);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(87, 16);
+            this.label27.Size = new System.Drawing.Size(104, 19);
             this.label27.TabIndex = 36;
             this.label27.Text = "Middle Name";
             // 
@@ -613,9 +656,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(25, 76);
+            this.label28.Location = new System.Drawing.Point(33, 94);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(74, 16);
+            this.label28.Size = new System.Drawing.Size(89, 19);
             this.label28.TabIndex = 35;
             this.label28.Text = "Last Name";
             // 
@@ -623,9 +667,10 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(25, 28);
+            this.label29.Location = new System.Drawing.Point(33, 34);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(108, 16);
+            this.label29.Size = new System.Drawing.Size(128, 19);
             this.label29.TabIndex = 33;
             this.label29.Text = "Respondent No.";
             // 
@@ -669,9 +714,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(50, 26);
+            this.groupBox1.Location = new System.Drawing.Point(67, 32);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 673);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(569, 828);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Complainant";
@@ -680,9 +727,10 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(19, 591);
+            this.label55.Location = new System.Drawing.Point(25, 727);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(102, 16);
+            this.label55.Size = new System.Drawing.Size(122, 19);
             this.label55.TabIndex = 52;
             this.label55.Text = "(If non-Filipino)";
             // 
@@ -690,53 +738,59 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(19, 570);
+            this.label47.Location = new System.Drawing.Point(25, 702);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(88, 16);
+            this.label47.Size = new System.Drawing.Size(105, 19);
             this.label47.TabIndex = 51;
             this.label47.Text = "Passport No.";
             // 
             // uptxtbx_compPassportId
             // 
             this.uptxtbx_compPassportId.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_compPassportId.Location = new System.Drawing.Point(136, 567);
+            this.uptxtbx_compPassportId.Location = new System.Drawing.Point(181, 698);
+            this.uptxtbx_compPassportId.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_compPassportId.Name = "uptxtbx_compPassportId";
-            this.uptxtbx_compPassportId.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_compPassportId.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_compPassportId.TabIndex = 50;
             // 
             // uptxtbx_compOccupation
             // 
             this.uptxtbx_compOccupation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_compOccupation.Location = new System.Drawing.Point(136, 539);
+            this.uptxtbx_compOccupation.Location = new System.Drawing.Point(181, 663);
+            this.uptxtbx_compOccupation.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_compOccupation.Name = "uptxtbx_compOccupation";
-            this.uptxtbx_compOccupation.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_compOccupation.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_compOccupation.TabIndex = 48;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(19, 545);
+            this.label46.Location = new System.Drawing.Point(25, 671);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(77, 16);
+            this.label46.Size = new System.Drawing.Size(92, 19);
             this.label46.TabIndex = 49;
             this.label46.Text = "Occupation";
             // 
             // uptxtbx_compNation
             // 
             this.uptxtbx_compNation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_compNation.Location = new System.Drawing.Point(136, 509);
+            this.uptxtbx_compNation.Location = new System.Drawing.Point(181, 626);
+            this.uptxtbx_compNation.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_compNation.Name = "uptxtbx_compNation";
-            this.uptxtbx_compNation.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_compNation.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_compNation.TabIndex = 46;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(19, 515);
+            this.label45.Location = new System.Drawing.Point(25, 634);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(74, 16);
+            this.label45.Size = new System.Drawing.Size(87, 19);
             this.label45.TabIndex = 47;
             this.label45.Text = "Nationality";
             // 
@@ -753,17 +807,19 @@
             "Senior High Level/Graduate",
             "Post Graduate",
             "Others"});
-            this.upcmbx_compEdAtt.Location = new System.Drawing.Point(167, 252);
+            this.upcmbx_compEdAtt.Location = new System.Drawing.Point(223, 310);
+            this.upcmbx_compEdAtt.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_compEdAtt.Name = "upcmbx_compEdAtt";
-            this.upcmbx_compEdAtt.Size = new System.Drawing.Size(254, 24);
+            this.upcmbx_compEdAtt.Size = new System.Drawing.Size(337, 27);
             this.upcmbx_compEdAtt.TabIndex = 45;
             // 
             // c_IDlbl
             // 
             this.c_IDlbl.AutoSize = true;
-            this.c_IDlbl.Location = new System.Drawing.Point(146, 28);
+            this.c_IDlbl.Location = new System.Drawing.Point(195, 34);
+            this.c_IDlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.c_IDlbl.Name = "c_IDlbl";
-            this.c_IDlbl.Size = new System.Drawing.Size(15, 16);
+            this.c_IDlbl.Size = new System.Drawing.Size(19, 19);
             this.c_IDlbl.TabIndex = 36;
             this.c_IDlbl.Text = "0";
             // 
@@ -771,9 +827,10 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(19, 256);
+            this.label49.Location = new System.Drawing.Point(25, 315);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(142, 16);
+            this.label49.Size = new System.Drawing.Size(168, 19);
             this.label49.TabIndex = 44;
             this.label49.Text = "Education Attainment";
             // 
@@ -783,18 +840,20 @@
             this.upcmbx_comSx.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.upcmbx_comSx.Location = new System.Drawing.Point(136, 159);
+            this.upcmbx_comSx.Location = new System.Drawing.Point(181, 196);
+            this.upcmbx_comSx.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_comSx.Name = "upcmbx_comSx";
-            this.upcmbx_comSx.Size = new System.Drawing.Size(67, 24);
+            this.upcmbx_comSx.Size = new System.Drawing.Size(88, 27);
             this.upcmbx_comSx.TabIndex = 32;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(19, 167);
+            this.label16.Location = new System.Drawing.Point(25, 206);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 16);
+            this.label16.Size = new System.Drawing.Size(37, 19);
             this.label16.TabIndex = 31;
             this.label16.Text = "Sex";
             // 
@@ -807,110 +866,123 @@
             "Separated",
             "Married",
             "Widowed"});
-            this.upcmbx_compCStatus.Location = new System.Drawing.Point(167, 225);
+            this.upcmbx_compCStatus.Location = new System.Drawing.Point(223, 277);
+            this.upcmbx_compCStatus.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_compCStatus.Name = "upcmbx_compCStatus";
-            this.upcmbx_compCStatus.Size = new System.Drawing.Size(254, 24);
+            this.upcmbx_compCStatus.Size = new System.Drawing.Size(337, 27);
             this.upcmbx_compCStatus.TabIndex = 43;
             // 
             // uptxtbx_comRegion
             // 
             this.uptxtbx_comRegion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comRegion.Location = new System.Drawing.Point(136, 475);
+            this.uptxtbx_comRegion.Location = new System.Drawing.Point(181, 585);
+            this.uptxtbx_comRegion.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comRegion.Name = "uptxtbx_comRegion";
-            this.uptxtbx_comRegion.Size = new System.Drawing.Size(67, 22);
+            this.uptxtbx_comRegion.Size = new System.Drawing.Size(88, 26);
             this.uptxtbx_comRegion.TabIndex = 30;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(19, 233);
+            this.label48.Location = new System.Drawing.Point(25, 287);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(77, 16);
+            this.label48.Size = new System.Drawing.Size(91, 19);
             this.label48.TabIndex = 42;
             this.label48.Text = "Civil Status";
             // 
             // uptxtbx_comProvince
             // 
             this.uptxtbx_comProvince.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comProvince.Location = new System.Drawing.Point(136, 443);
+            this.uptxtbx_comProvince.Location = new System.Drawing.Point(181, 545);
+            this.uptxtbx_comProvince.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comProvince.Name = "uptxtbx_comProvince";
-            this.uptxtbx_comProvince.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_comProvince.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_comProvince.TabIndex = 29;
             // 
             // uptxtbx_comCity
             // 
             this.uptxtbx_comCity.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comCity.Location = new System.Drawing.Point(136, 410);
+            this.uptxtbx_comCity.Location = new System.Drawing.Point(181, 505);
+            this.uptxtbx_comCity.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comCity.Name = "uptxtbx_comCity";
-            this.uptxtbx_comCity.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_comCity.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_comCity.TabIndex = 28;
             // 
             // uptxtbx_comBarangay
             // 
             this.uptxtbx_comBarangay.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comBarangay.Location = new System.Drawing.Point(136, 379);
+            this.uptxtbx_comBarangay.Location = new System.Drawing.Point(181, 466);
+            this.uptxtbx_comBarangay.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comBarangay.Name = "uptxtbx_comBarangay";
-            this.uptxtbx_comBarangay.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_comBarangay.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_comBarangay.TabIndex = 27;
             // 
             // uptxtbx_comPurok
             // 
             this.uptxtbx_comPurok.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comPurok.Location = new System.Drawing.Point(136, 345);
+            this.uptxtbx_comPurok.Location = new System.Drawing.Point(181, 425);
+            this.uptxtbx_comPurok.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comPurok.Name = "uptxtbx_comPurok";
-            this.uptxtbx_comPurok.Size = new System.Drawing.Size(221, 22);
+            this.uptxtbx_comPurok.Size = new System.Drawing.Size(293, 26);
             this.uptxtbx_comPurok.TabIndex = 26;
             // 
             // uptxtbx_comRelgion
             // 
             this.uptxtbx_comRelgion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comRelgion.Location = new System.Drawing.Point(136, 283);
+            this.uptxtbx_comRelgion.Location = new System.Drawing.Point(181, 348);
+            this.uptxtbx_comRelgion.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comRelgion.Name = "uptxtbx_comRelgion";
-            this.uptxtbx_comRelgion.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_comRelgion.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_comRelgion.TabIndex = 25;
             // 
             // uptxtbx_comAge
             // 
             this.uptxtbx_comAge.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comAge.Location = new System.Drawing.Point(136, 189);
+            this.uptxtbx_comAge.Location = new System.Drawing.Point(181, 233);
+            this.uptxtbx_comAge.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comAge.Name = "uptxtbx_comAge";
-            this.uptxtbx_comAge.Size = new System.Drawing.Size(67, 22);
+            this.uptxtbx_comAge.Size = new System.Drawing.Size(88, 26);
             this.uptxtbx_comAge.TabIndex = 24;
             this.uptxtbx_comAge.TextChanged += new System.EventHandler(this.uptxtbx_comAge_TextChanged);
             // 
             // uptxtbx_comContact
             // 
             this.uptxtbx_comContact.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comContact.Location = new System.Drawing.Point(136, 317);
+            this.uptxtbx_comContact.Location = new System.Drawing.Point(181, 390);
+            this.uptxtbx_comContact.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comContact.Name = "uptxtbx_comContact";
-            this.uptxtbx_comContact.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_comContact.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_comContact.TabIndex = 23;
             this.uptxtbx_comContact.TextChanged += new System.EventHandler(this.uptxtbx_comContact_TextChanged);
             // 
             // uptxtbx_comMN
             // 
             this.uptxtbx_comMN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comMN.Location = new System.Drawing.Point(136, 129);
+            this.uptxtbx_comMN.Location = new System.Drawing.Point(181, 159);
+            this.uptxtbx_comMN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comMN.Name = "uptxtbx_comMN";
-            this.uptxtbx_comMN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_comMN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_comMN.TabIndex = 22;
             // 
             // uptxtbx_comFN
             // 
             this.uptxtbx_comFN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comFN.Location = new System.Drawing.Point(136, 101);
+            this.uptxtbx_comFN.Location = new System.Drawing.Point(181, 124);
+            this.uptxtbx_comFN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comFN.Name = "uptxtbx_comFN";
-            this.uptxtbx_comFN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_comFN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_comFN.TabIndex = 21;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(19, 481);
+            this.label15.Location = new System.Drawing.Point(25, 592);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 16);
+            this.label15.Size = new System.Drawing.Size(59, 19);
             this.label15.TabIndex = 20;
             this.label15.Text = "Region";
             // 
@@ -918,9 +990,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(19, 449);
+            this.label14.Location = new System.Drawing.Point(25, 553);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 16);
+            this.label14.Size = new System.Drawing.Size(72, 19);
             this.label14.TabIndex = 19;
             this.label14.Text = "Province";
             // 
@@ -928,9 +1001,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(19, 416);
+            this.label13.Location = new System.Drawing.Point(25, 512);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 16);
+            this.label13.Size = new System.Drawing.Size(129, 19);
             this.label13.TabIndex = 18;
             this.label13.Text = "Municipality/City";
             // 
@@ -938,9 +1012,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 385);
+            this.label12.Location = new System.Drawing.Point(25, 474);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.Size = new System.Drawing.Size(79, 19);
             this.label12.TabIndex = 17;
             this.label12.Text = "Barangay";
             // 
@@ -948,9 +1023,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 351);
+            this.label11.Location = new System.Drawing.Point(25, 432);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 16);
+            this.label11.Size = new System.Drawing.Size(52, 19);
             this.label11.TabIndex = 16;
             this.label11.Text = "Purok";
             // 
@@ -958,9 +1034,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 289);
+            this.label10.Location = new System.Drawing.Point(25, 356);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
+            this.label10.Size = new System.Drawing.Size(65, 19);
             this.label10.TabIndex = 15;
             this.label10.Text = "Religion";
             // 
@@ -968,9 +1045,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 320);
+            this.label9.Location = new System.Drawing.Point(25, 394);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 16);
+            this.label9.Size = new System.Drawing.Size(99, 19);
             this.label9.TabIndex = 14;
             this.label9.Text = "Contact No.";
             // 
@@ -978,9 +1056,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 192);
+            this.label8.Location = new System.Drawing.Point(25, 236);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 16);
+            this.label8.Size = new System.Drawing.Size(37, 19);
             this.label8.TabIndex = 13;
             this.label8.Text = "Age";
             // 
@@ -988,27 +1067,30 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 107);
+            this.label7.Location = new System.Drawing.Point(25, 132);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 16);
+            this.label7.Size = new System.Drawing.Size(90, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "First Name";
             // 
             // uptxtbx_comLN
             // 
             this.uptxtbx_comLN.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtbx_comLN.Location = new System.Drawing.Point(136, 70);
+            this.uptxtbx_comLN.Location = new System.Drawing.Point(181, 86);
+            this.uptxtbx_comLN.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtbx_comLN.Name = "uptxtbx_comLN";
-            this.uptxtbx_comLN.Size = new System.Drawing.Size(160, 22);
+            this.uptxtbx_comLN.Size = new System.Drawing.Size(212, 26);
             this.uptxtbx_comLN.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 139);
+            this.label6.Location = new System.Drawing.Point(25, 171);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 16);
+            this.label6.Size = new System.Drawing.Size(104, 19);
             this.label6.TabIndex = 10;
             this.label6.Text = "Middle Name";
             // 
@@ -1016,9 +1098,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 76);
+            this.label5.Location = new System.Drawing.Point(25, 94);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 9;
             this.label5.Text = "Last Name";
             // 
@@ -1026,9 +1109,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 28);
+            this.label4.Location = new System.Drawing.Point(25, 34);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 16);
+            this.label4.Size = new System.Drawing.Size(133, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Complainant No.";
             // 
@@ -1060,10 +1144,11 @@
             this.tabPage2.Controls.Add(this.label33);
             this.tabPage2.Controls.Add(this.label32);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1057, 737);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1412, 911);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Complain Case";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1071,9 +1156,10 @@
             // uptxtb_caseRegion
             // 
             this.uptxtb_caseRegion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtb_caseRegion.Location = new System.Drawing.Point(666, 403);
+            this.uptxtb_caseRegion.Location = new System.Drawing.Point(888, 496);
+            this.uptxtb_caseRegion.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_caseRegion.Name = "uptxtb_caseRegion";
-            this.uptxtb_caseRegion.Size = new System.Drawing.Size(67, 22);
+            this.uptxtb_caseRegion.Size = new System.Drawing.Size(88, 26);
             this.uptxtb_caseRegion.TabIndex = 66;
             // 
             // upcmbx_casePlcIncident
@@ -1090,67 +1176,75 @@
             "Transportation & Connecting Sites",
             "Commercial Places",
             "No Response"});
-            this.upcmbx_casePlcIncident.Location = new System.Drawing.Point(666, 227);
+            this.upcmbx_casePlcIncident.Location = new System.Drawing.Point(888, 279);
+            this.upcmbx_casePlcIncident.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_casePlcIncident.Name = "upcmbx_casePlcIncident";
-            this.upcmbx_casePlcIncident.Size = new System.Drawing.Size(240, 21);
+            this.upcmbx_casePlcIncident.Size = new System.Drawing.Size(319, 25);
             this.upcmbx_casePlcIncident.TabIndex = 41;
             // 
             // uptxtb_caseProvince
             // 
             this.uptxtb_caseProvince.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtb_caseProvince.Location = new System.Drawing.Point(666, 371);
+            this.uptxtb_caseProvince.Location = new System.Drawing.Point(888, 457);
+            this.uptxtb_caseProvince.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_caseProvince.Name = "uptxtb_caseProvince";
-            this.uptxtb_caseProvince.Size = new System.Drawing.Size(240, 22);
+            this.uptxtb_caseProvince.Size = new System.Drawing.Size(319, 26);
             this.uptxtb_caseProvince.TabIndex = 65;
             // 
             // uptxtb_caseCity
             // 
             this.uptxtb_caseCity.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtb_caseCity.Location = new System.Drawing.Point(666, 338);
+            this.uptxtb_caseCity.Location = new System.Drawing.Point(888, 416);
+            this.uptxtb_caseCity.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_caseCity.Name = "uptxtb_caseCity";
-            this.uptxtb_caseCity.Size = new System.Drawing.Size(240, 22);
+            this.uptxtb_caseCity.Size = new System.Drawing.Size(319, 26);
             this.uptxtb_caseCity.TabIndex = 64;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(549, 227);
+            this.label39.Location = new System.Drawing.Point(732, 279);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(111, 16);
+            this.label39.Size = new System.Drawing.Size(130, 19);
             this.label39.TabIndex = 40;
             this.label39.Text = "Place of Incident";
             // 
             // uptxtb_caseBarangay
             // 
             this.uptxtb_caseBarangay.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtb_caseBarangay.Location = new System.Drawing.Point(666, 307);
+            this.uptxtb_caseBarangay.Location = new System.Drawing.Point(888, 378);
+            this.uptxtb_caseBarangay.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_caseBarangay.Name = "uptxtb_caseBarangay";
-            this.uptxtb_caseBarangay.Size = new System.Drawing.Size(240, 22);
+            this.uptxtb_caseBarangay.Size = new System.Drawing.Size(319, 26);
             this.uptxtb_caseBarangay.TabIndex = 63;
             // 
             // upcmbx_caseDate
             // 
-            this.upcmbx_caseDate.Location = new System.Drawing.Point(686, 142);
+            this.upcmbx_caseDate.Location = new System.Drawing.Point(915, 175);
+            this.upcmbx_caseDate.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_caseDate.Name = "upcmbx_caseDate";
-            this.upcmbx_caseDate.Size = new System.Drawing.Size(199, 20);
+            this.upcmbx_caseDate.Size = new System.Drawing.Size(264, 23);
             this.upcmbx_caseDate.TabIndex = 8;
             // 
             // uptxtb_casePurok
             // 
             this.uptxtb_casePurok.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uptxtb_casePurok.Location = new System.Drawing.Point(666, 273);
+            this.uptxtb_casePurok.Location = new System.Drawing.Point(888, 336);
+            this.uptxtb_casePurok.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_casePurok.Name = "uptxtb_casePurok";
-            this.uptxtb_casePurok.Size = new System.Drawing.Size(240, 22);
+            this.uptxtb_casePurok.Size = new System.Drawing.Size(319, 26);
             this.uptxtb_casePurok.TabIndex = 62;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(568, 143);
+            this.label38.Location = new System.Drawing.Point(757, 176);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(92, 16);
+            this.label38.Size = new System.Drawing.Size(107, 19);
             this.label38.TabIndex = 39;
             this.label38.Text = "Incident Date";
             // 
@@ -1158,9 +1252,10 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(549, 409);
+            this.label40.Location = new System.Drawing.Point(732, 503);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(50, 16);
+            this.label40.Size = new System.Drawing.Size(59, 19);
             this.label40.TabIndex = 61;
             this.label40.Text = "Region";
             // 
@@ -1172,18 +1267,20 @@
             "PNP",
             "MSWDO",
             "COURT"});
-            this.upcmbx_caseReferral.Location = new System.Drawing.Point(666, 82);
+            this.upcmbx_caseReferral.Location = new System.Drawing.Point(888, 101);
+            this.upcmbx_caseReferral.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_caseReferral.Name = "upcmbx_caseReferral";
-            this.upcmbx_caseReferral.Size = new System.Drawing.Size(240, 21);
+            this.upcmbx_caseReferral.Size = new System.Drawing.Size(319, 25);
             this.upcmbx_caseReferral.TabIndex = 38;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(549, 377);
+            this.label41.Location = new System.Drawing.Point(732, 464);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 16);
+            this.label41.Size = new System.Drawing.Size(72, 19);
             this.label41.TabIndex = 60;
             this.label41.Text = "Province";
             // 
@@ -1195,18 +1292,20 @@
             "Pending",
             "Dismissed",
             "Stop"});
-            this.upcmbx_caseStatus.Location = new System.Drawing.Point(666, 52);
+            this.upcmbx_caseStatus.Location = new System.Drawing.Point(888, 64);
+            this.upcmbx_caseStatus.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_caseStatus.Name = "upcmbx_caseStatus";
-            this.upcmbx_caseStatus.Size = new System.Drawing.Size(240, 21);
+            this.upcmbx_caseStatus.Size = new System.Drawing.Size(319, 25);
             this.upcmbx_caseStatus.TabIndex = 37;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(549, 344);
+            this.label42.Location = new System.Drawing.Point(732, 423);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(108, 16);
+            this.label42.Size = new System.Drawing.Size(129, 19);
             this.label42.TabIndex = 59;
             this.label42.Text = "Municipality/City";
             // 
@@ -1214,9 +1313,10 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(585, 86);
+            this.label37.Location = new System.Drawing.Point(780, 106);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(75, 16);
+            this.label37.Size = new System.Drawing.Size(90, 19);
             this.label37.TabIndex = 36;
             this.label37.Text = "Referral To";
             // 
@@ -1224,9 +1324,10 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(549, 313);
+            this.label43.Location = new System.Drawing.Point(732, 385);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(67, 16);
+            this.label43.Size = new System.Drawing.Size(79, 19);
             this.label43.TabIndex = 58;
             this.label43.Text = "Barangay";
             // 
@@ -1234,9 +1335,10 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(576, 52);
+            this.label36.Location = new System.Drawing.Point(768, 64);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(84, 16);
+            this.label36.Size = new System.Drawing.Size(99, 19);
             this.label36.TabIndex = 8;
             this.label36.Text = "Case Status";
             // 
@@ -1244,27 +1346,30 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(549, 279);
+            this.label44.Location = new System.Drawing.Point(732, 343);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(43, 16);
+            this.label44.Size = new System.Drawing.Size(52, 19);
             this.label44.TabIndex = 57;
             this.label44.Text = "Purok";
             // 
             // uptxtb_caseDescription
             // 
-            this.uptxtb_caseDescription.Location = new System.Drawing.Point(26, 142);
+            this.uptxtb_caseDescription.Location = new System.Drawing.Point(35, 175);
+            this.uptxtb_caseDescription.Margin = new System.Windows.Forms.Padding(4);
             this.uptxtb_caseDescription.Multiline = true;
             this.uptxtb_caseDescription.Name = "uptxtb_caseDescription";
-            this.uptxtb_caseDescription.Size = new System.Drawing.Size(440, 318);
+            this.uptxtb_caseDescription.Size = new System.Drawing.Size(585, 390);
             this.uptxtb_caseDescription.TabIndex = 8;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(23, 123);
+            this.label35.Location = new System.Drawing.Point(31, 151);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(148, 16);
+            this.label35.Size = new System.Drawing.Size(174, 19);
             this.label35.TabIndex = 35;
             this.label35.Text = "Description of Incident";
             // 
@@ -1272,9 +1377,10 @@
             // 
             this.upcmbx_caseSubcase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upcmbx_caseSubcase.FormattingEnabled = true;
-            this.upcmbx_caseSubcase.Location = new System.Drawing.Point(182, 81);
+            this.upcmbx_caseSubcase.Location = new System.Drawing.Point(243, 100);
+            this.upcmbx_caseSubcase.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_caseSubcase.Name = "upcmbx_caseSubcase";
-            this.upcmbx_caseSubcase.Size = new System.Drawing.Size(284, 21);
+            this.upcmbx_caseSubcase.Size = new System.Drawing.Size(377, 25);
             this.upcmbx_caseSubcase.TabIndex = 34;
             this.upcmbx_caseSubcase.SelectedIndexChanged += new System.EventHandler(this.upcmbx_caseSubcase_SelectedIndexChanged);
             // 
@@ -1292,18 +1398,21 @@
             "R.A. 9775: Anti-Child Pornography Act",
             "R.A. 9995: Anti-Photo and Video Act 2009",
             "Revised Penal Code"});
-            this.upcmbx_caseViolation.Location = new System.Drawing.Point(125, 52);
+            this.upcmbx_caseViolation.Location = new System.Drawing.Point(167, 64);
+            this.upcmbx_caseViolation.Margin = new System.Windows.Forms.Padding(4);
             this.upcmbx_caseViolation.Name = "upcmbx_caseViolation";
-            this.upcmbx_caseViolation.Size = new System.Drawing.Size(341, 21);
+            this.upcmbx_caseViolation.Size = new System.Drawing.Size(453, 25);
             this.upcmbx_caseViolation.TabIndex = 33;
+            this.upcmbx_caseViolation.SelectedIndexChanged += new System.EventHandler(this.upcmbx_caseViolation_SelectedIndexChanged);
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(23, 82);
+            this.label34.Location = new System.Drawing.Point(31, 101);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(153, 16);
+            this.label34.Size = new System.Drawing.Size(183, 19);
             this.label34.TabIndex = 10;
             this.label34.Text = "R.A. Violations Specifics";
             // 
@@ -1311,9 +1420,10 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(23, 52);
+            this.label33.Location = new System.Drawing.Point(31, 64);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(96, 16);
+            this.label33.Size = new System.Drawing.Size(115, 19);
             this.label33.TabIndex = 9;
             this.label33.Text = "R.A. Violations";
             // 
@@ -1321,44 +1431,51 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(21, 21);
+            this.label32.Location = new System.Drawing.Point(28, 26);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(86, 16);
+            this.label32.Size = new System.Drawing.Size(100, 19);
             this.label32.TabIndex = 8;
             this.label32.Text = "Case Details";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, -2);
+            this.label1.Font = new System.Drawing.Font("Bakbak One", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 46);
+            this.label1.Size = new System.Drawing.Size(386, 68);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Manage Case File";
+            this.label1.Text = "MANAGE CASE FILE";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 98);
+            this.label2.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Enter Case No.";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(104, 93);
+            this.textBox1.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(174, 114);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
+            this.textBox1.Size = new System.Drawing.Size(163, 26);
             this.textBox1.TabIndex = 33;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(258, 88);
+            this.button1.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(379, 108);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 32);
+            this.button1.Size = new System.Drawing.Size(165, 39);
             this.button1.TabIndex = 34;
             this.button1.Text = "Enter Case No";
             this.button1.UseVisualStyleBackColor = true;
@@ -1366,27 +1483,33 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(869, 75);
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1158, 80);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 58);
+            this.button2.Size = new System.Drawing.Size(294, 90);
             this.button2.TabIndex = 35;
             this.button2.Text = "UPDATE CASE FILE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ManageCaseList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1121, 934);
+            this.ClientSize = new System.Drawing.Size(1532, 1055);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageCaseList";
             this.Text = "ManageCaseList";
             this.Load += new System.EventHandler(this.ManageCaseList_Load);

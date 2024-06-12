@@ -17,12 +17,16 @@ namespace VAWC_Recording_System.NewForms
         MySqlCommand RSDBCommand = new MySqlCommand();
         MySqlDataReader RSBDReader;
         RSBDConnection dbcon = new RSBDConnection();
+
+        //Form2 f = new Form2;
+       
         string userID;
-        public HandOrgForm(string userID)
+        public HandOrgForm(Form f,string userID)
         {
             InitializeComponent();
             RSDBConnect = new MySqlConnection(dbcon.MyConnect());
             this.userID = userID;
+            //this.f;
             showdetails();
         }
 
@@ -91,7 +95,10 @@ namespace VAWC_Recording_System.NewForms
             }
         }
 
-
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
 
     }
 }

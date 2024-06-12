@@ -16,5 +16,15 @@ namespace VAWC_Recording_System.NewForms
         {
             InitializeComponent();
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

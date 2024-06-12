@@ -287,49 +287,53 @@ namespace VAWC_Recording_System.NewForms
         private void upcmbx_caseSubcase_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (upcmbx_caseViolation.SelectedItem != null)
+         
+
+        }
+
+        private void PopulatecmbxVS(string selectedCategory)
+        {
+
+            upcmbx_caseSubcase.Items.Clear();
+
+            switch (selectedCategory)
             {
-                string selectedCategory = upcmbx_caseViolation.SelectedItem.ToString();
+                case "R.A. 9262: Anti Violence Against Women and their Children Act":
+                    upcmbx_caseSubcase.Items.Add("Sexual Abuse");
+                    upcmbx_caseSubcase.Items.Add("Psychological");
+                    upcmbx_caseSubcase.Items.Add("Physical");
+                    upcmbx_caseSubcase.Items.Add("Economic");
+                    upcmbx_caseSubcase.Items.Add("Others");
+                    break;
+                case "R.A. 8353: Anti-Rape Law of 1995":
+                    upcmbx_caseSubcase.Items.Add("Rape by Sexual Intercourse");
+                    upcmbx_caseSubcase.Items.Add("Rape by Sexual Assault");
+                    break;
+                case "R.A. 7877: Anti-Sexual Harassment Act":
+                    upcmbx_caseSubcase.Items.Add("Verbal");
+                    upcmbx_caseSubcase.Items.Add("Physical");
+                    upcmbx_caseSubcase.Items.Add("Use of Object: Pictures, Letters or Notes with Sexual under-pinnings");
+                    break;
+                case "R.A. 7610: Special Protection of Children Against Child Abuse, Exploitation and Discrimination Act":
+                    upcmbx_caseSubcase.Items.Add("Engage, Facilitate, Promote or Attempt to commit Child Prostitution");
+                    upcmbx_caseSubcase.Items.Add("Sexual Intercourse or Lascivious Conduct");
+                    break;
+                case "R.A. 9208: Anti-Trafficking in Person Act of 2003":
 
-                switch (selectedCategory)
-                {
+                    break;
+                case "R.A. 9775: Anti-Child Pornography Act":
 
-                    case "R.A. 9262: Anti Violence Against Women and their Children Act":
-                        upcmbx_caseSubcase.Items.Add("Sexual Abuse");
-                        upcmbx_caseSubcase.Items.Add("Psychological");
-                        upcmbx_caseSubcase.Items.Add("Physical");
-                        upcmbx_caseSubcase.Items.Add("Economic");
-                        upcmbx_caseSubcase.Items.Add("Others");
-                        break;
-                    case "R.A. 8353: Anti-Rape Law of 1995":
-                        upcmbx_caseSubcase.Items.Add("Rape by Sexual Intercourse");
-                        upcmbx_caseSubcase.Items.Add("Rape by Sexual Assault");
-                        break;
-                    case "R.A. 7877: Anti-Sexual Harrassment Act":
-                        upcmbx_caseSubcase.Items.Add("Verbal");
-                        upcmbx_caseSubcase.Items.Add("Physical");
-                        upcmbx_caseSubcase.Items.Add("Use of Object: Pictures, Letters or Notes with Sexual under-pinnings");
-                        break;
-                    case "R.A. 7610: Special Protection of Children Against Child Abuse, Exploitation and Discrimination Act":
-                        upcmbx_caseSubcase.Items.Add("Engage, Facilitate, Promote or Attempt to commit Child Prostitution");
-                        upcmbx_caseSubcase.Items.Add("Sexual Intercourse or Lascivious Conduct");
-                        break;
-                    case "R.A. 9208: Anti-Trafficking in Person Act of 2003":
-                        break;
-                    case "R.A. 9775: Anti-Child Pornography Act":
-                        break;
-                    case "R.A. 9995: Anti-Photo and Video Act 2009":
-                        break;
-                    case "Revised Penal Code":
-                        upcmbx_caseSubcase.Items.Add("Art 336: Acts of Laschiviousness");
-                        upcmbx_caseSubcase.Items.Add("Others");
-                        break;
-                    default:
-                        break;
+                    break;
+                case "R.A. 9995: Anti-Photo and Video Voyeurism Act of 2009":
 
-                }
+                    break;
+                case "Revised Penal Code":
+                    upcmbx_caseSubcase.Items.Add("Art 336: Acts of Lasciviousness");
+                    upcmbx_caseSubcase.Items.Add("Others");
+                    break;
+                default:
+                    break;
             }
-
         }
 
         private void updateCaseFile()
@@ -586,6 +590,20 @@ namespace VAWC_Recording_System.NewForms
             uptxtb_caseCity.Clear();
             uptxtb_caseProvince.Clear();
             uptxtb_caseRegion.Clear();
+        }
+
+        private void upcmbx_caseViolation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (upcmbx_caseViolation.SelectedItem != null)
+            {
+                string selectedCategory = upcmbx_caseViolation.SelectedItem.ToString();
+
+                upcmbx_caseViolation.SelectedIndexChanged -= upcmbx_caseViolation_SelectedIndexChanged;
+
+                PopulatecmbxVS(selectedCategory);
+
+                upcmbx_caseViolation.SelectedIndexChanged += upcmbx_caseViolation_SelectedIndexChanged;
+            }
         }
     }
 }

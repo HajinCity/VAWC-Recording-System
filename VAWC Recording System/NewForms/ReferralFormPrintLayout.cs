@@ -18,7 +18,6 @@ namespace VAWC_Recording_System.NewForms
         MySqlConnection RSDBConnect = new MySqlConnection();
         MySqlCommand RSDBCommand = new MySqlCommand();
         MySqlCommand RSDBCommand1 = new MySqlCommand();
-        MySqlCommand RSDBCommand2 = new MySqlCommand();
         MySqlDataReader RSBDReader;
         RSBDConnection dbcon = new RSBDConnection();
         public ReferralFormPrintLayout()
@@ -68,7 +67,23 @@ namespace VAWC_Recording_System.NewForms
         private void loadtheinfo()
         {
             string typedCaseNo = textBox1.Text;
+
+            // Check if the textbox is empty
+            if (string.IsNullOrWhiteSpace(typedCaseNo))
+            {
+                MessageBox.Show("Please enter a case number.");
+                return;
+            }
+
             string caseNoFromDB = caseno;
+
+            // Check if the case number exists in the database
+            if (string.IsNullOrEmpty(caseNoFromDB))
+            {
+                MessageBox.Show("No record found for the entered case number.");
+                return;
+            }
+
             try
             {
                 RSDBConnect.Open();
@@ -93,20 +108,16 @@ namespace VAWC_Recording_System.NewForms
                         comp_Barangay.Text = RSBDReader1["comp_Barangay"].ToString();
                         comp_Muni.Text = RSBDReader1["comp_City"].ToString();
                         comp_Province.Text = RSBDReader1["comp_Province"].ToString();
-                       // comp_Region.Text = RSBDReader1["comp_Region"].ToString();
-
-                       
+                        // comp_Region.Text = RSBDReader1["comp_Region"].ToString();
                     }
                     RSDBConnect.Close();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-       
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
