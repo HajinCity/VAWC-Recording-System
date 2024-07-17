@@ -20,7 +20,6 @@ namespace VAWC_Recording_System.NewForms
             InitializeComponent();
         }
 
-    
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime startDate = dateTimePicker1.Value;
@@ -31,18 +30,18 @@ namespace VAWC_Recording_System.NewForms
                 RSDBConnect.Open();
                 RSDBCommand = RSDBConnect.CreateCommand();
                 RSDBCommand.CommandText = @"
-     SELECT case_Violation, case_SubViolation, COUNT(*) AS violation_count
-     FROM caselist
-     WHERE case_ComplaintDate BETWEEN @startDate AND @endDate
-     AND (case_Violation = 'R.A. 9262: Anti Violence Against Women and their Children Act'
-     OR case_Violation = 'R.A. 8353: Anti-Rape Law of 1995'
-     OR case_Violation = 'R.A. 7877: Anti-Sexual Harrassment Act'
-     OR case_Violation = 'R.A. 9208: Anti-Trafficking in Person Act of 2003'
-     OR case_Violation = 'R.A. 9775: Anti-Child Pornography Act'
-     OR case_Violation = 'R.A. 9995: Anti-Photo and Video Act 2009'
-     OR case_Violation = 'Revised Penal Code'
-     OR case_Violation = 'R.A. 7610: Special Protection of Children Against Child Abuse, Exploitation and Discrimination Act')
-     GROUP BY case_Violation, case_SubViolation";
+                    SELECT case_Violation, case_SubViolation, COUNT(*) AS violation_count
+                    FROM caselist
+                    WHERE case_ComplaintDate BETWEEN @startDate AND @endDate
+                    AND (case_Violation = 'R.A. 9262: Anti Violence Against Women and their Children Act'
+                    OR case_Violation = 'R.A. 8353: Anti-Rape Law of 1995'
+                    OR case_Violation = 'R.A. 7877: Anti-Sexual Harrassment Act'
+                    OR case_Violation = 'R.A. 9208: Anti-Trafficking in Person Act of 2003'
+                    OR case_Violation = 'R.A. 9775: Anti-Child Pornography Act'
+                    OR case_Violation = 'R.A. 9995: Anti-Photo and Video Act 2009'
+                    OR case_Violation = 'Revised Penal Code'
+                    OR case_Violation = 'R.A. 7610: Special Protection of Children Against Child Abuse, Exploitation and Discrimination Act')
+                    GROUP BY case_Violation, case_SubViolation";
 
                 RSDBCommand.Parameters.AddWithValue("@startDate", startDate);
                 RSDBCommand.Parameters.AddWithValue("@endDate", endDate);
@@ -118,6 +117,9 @@ namespace VAWC_Recording_System.NewForms
                 cnt_9262_Economic.Text = ra9262EconomicCount.ToString();
 
                 RSBDReader.Close();
+
+                // Display success message
+                MessageBox.Show("Counted cases successfully retrieved.");
             }
             catch (Exception ex)
             {
@@ -127,11 +129,6 @@ namespace VAWC_Recording_System.NewForms
             {
                 RSDBConnect.Close();
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

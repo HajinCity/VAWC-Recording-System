@@ -71,7 +71,7 @@ namespace VAWC_Recording_System.NewForms
         private void loadtoUpdatetheCases()
         {
             string typedCaseNo = textBox1.Text;
-            string caseNoFromDB = caseno; 
+            string caseNoFromDB = caseno;
 
             if (typedCaseNo == caseNoFromDB)
             {
@@ -102,15 +102,25 @@ namespace VAWC_Recording_System.NewForms
                         upcmbx_caseViolation.SelectedItem = RSBDReader["case_Violation"].ToString();
                         upcmbx_caseSubcase.SelectedItem = RSBDReader["case_SubViolation"].ToString();
                         uptxtb_caseDescription.Text = RSBDReader["case_Description"].ToString();
-                        upcmbx_caseStatus.SelectedItem = RSBDReader["case_Status"].ToString();
+                        string caseStatus = RSBDReader["case_Status"].ToString();
+                        upcmbx_caseStatus.SelectedItem = caseStatus;
                         upcmbx_caseReferral.SelectedItem = RSBDReader["case_ReferredTo"].ToString();
-                      //  upcmbx_caseDate.MinDate = RSBDReader.GetDateTime("case_incidentDate");
                         upcmbx_casePlcIncident.SelectedItem = RSBDReader["case_plcofincident"].ToString();
                         uptxtb_casePurok.Text = RSBDReader["case_purok"].ToString();
                         uptxtb_caseBarangay.Text = RSBDReader["case_barangay"].ToString();
                         uptxtb_caseCity.Text = RSBDReader["case_municipality"].ToString();
                         uptxtb_caseProvince.Text = RSBDReader["case_province"].ToString();
                         uptxtb_caseRegion.Text = RSBDReader["case_region"].ToString();
+
+                        // Enable or disable the update button based on the case status
+                        if (caseStatus == "Closed" || caseStatus == "Stop" || caseStatus == "Dismissed")
+                        {
+                            button2.Enabled = false;
+                        }
+                        else
+                        {
+                            button2.Enabled = true;
+                        }
                     }
                     RSBDReader.Close();
 
@@ -141,7 +151,6 @@ namespace VAWC_Recording_System.NewForms
                         uptxtbx_compNation.Text = RSBDReader1["comp_Nationality"].ToString();
                         uptxtbx_compOccupation.Text = RSBDReader1["comp_Occupation"].ToString();
                         uptxtbx_compPassportId.Text = RSBDReader1["comp_PassportId"].ToString();
-
                     }
                     RSBDReader1.Close();
 
@@ -174,27 +183,26 @@ namespace VAWC_Recording_System.NewForms
                         uptxtbx_resNationality.Text = RSBDReader2["respo_Nationality"].ToString();
                         uptxtbx_resOccupation.Text = RSBDReader2["respo_Occupation"].ToString();
                         uptxtbx_resPassportId.Text = RSBDReader2["respo_PassportID"].ToString();
-
                     }
+                    RSBDReader2.Close();
 
-                        RSDBConnect.Close();
+                    RSDBConnect.Close();
 
                     MessageBox.Show("The Case Filed Successfully Retrieve");
-                  
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
-                    RSDBConnect.Close(); 
+                    RSDBConnect.Close();
                 }
             }
             else
             {
                 MessageBox.Show("The case number does not exist in the database.");
-               
                 textBox1.Focus();
             }
         }
+
         private void ManageCaseList_Load(object sender, EventArgs e)
         {
             uptxtbx_comAge.TextChanged += uptxtbx_comAge_TextChanged;
@@ -347,7 +355,6 @@ namespace VAWC_Recording_System.NewForms
                 if (MessageBox.Show("Are you sure you want to update this Case File?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     RSDBConnect.Open();
-
                    
                     string updateCaseQuery = "UPDATE caselist SET ";
                     updateCaseQuery += "case_cLastName = @cLastName, ";

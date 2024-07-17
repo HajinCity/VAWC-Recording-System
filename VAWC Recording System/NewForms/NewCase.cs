@@ -215,20 +215,40 @@ namespace VAWC_Recording_System.NewForms
 
             try
             {
+                if (string.IsNullOrEmpty(compLNtxtb.Text))
+                {
+                    MessageBox.Show("Complainant Last Name is required.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(compFNtxtb.Text))
+                {
+                    MessageBox.Show("Complainant First Name is required.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(respoLNtxtb.Text))
+                {
+                    MessageBox.Show("Respondent Last Name is required.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(respoFNtxtb.Text))
+                {
+                    MessageBox.Show("Respondent First Name is required.");
+                    return;
+                }
+
                 //Carlos Code
-                //int compID = CompGenerateAutoID(); // Get the updated auto-generated ID
-                //int respoID = ResGenerateAutoID(); // Get the updated auto-generated ID
-                //int caseNo = CaseGenerateAutoID(); // Get the updated auto-generated ID
+                //int compID = CompGenerateAutoID();
+                //int respoID = ResGenerateAutoID(); 
+                //int caseNo = CaseGenerateAutoID(); 
 
-                //Edited as per switch
-                int compID = CompGenerateAutoID(); // Get the updated auto-generated ID
-                int respoID = ResGenerateAutoID(); // Get the updated auto-generated ID
-                int caseNo = CaseGenerateAutoID(); // Get the updated auto-generated ID
+                int compID = CompGenerateAutoID(); 
+                int respoID = ResGenerateAutoID();
+                int caseNo = CaseGenerateAutoID(); 
 
-                //label58.Text = CaseGenerateAutoID().ToString();
-                //label59.Text = CompGenerateAutoID().ToString();
-                //label60.Text = ResGenerateAutoID().ToString();
-
+              
                 using (MySqlConnection RSDBConnect = new MySqlConnection(dbcon.MyConnect()))
                 {
                     RSDBConnect.Open();
@@ -255,7 +275,6 @@ namespace VAWC_Recording_System.NewForms
                         RSDBCommand1.Parameters.AddWithValue("@comp_Occupation", string.IsNullOrEmpty(compOccupationTxtbx.Text) ? (object)DBNull.Value : compOccupationTxtbx.Text);
                         RSDBCommand1.Parameters.AddWithValue("@comp_PassportId", string.IsNullOrEmpty(compPassportTxtbx.Text) ? (object)DBNull.Value : compPassportTxtbx.Text);
 
-
                         RSDBCommand1.ExecuteNonQuery();
                     }
 
@@ -281,8 +300,6 @@ namespace VAWC_Recording_System.NewForms
                         RSDBCommand2.Parameters.AddWithValue("@respo_Nationality", string.IsNullOrEmpty(respoNationalityTxtbx.Text) ? (object)DBNull.Value : respoNationalityTxtbx.Text);
                         RSDBCommand2.Parameters.AddWithValue("@respo_Occupation", string.IsNullOrEmpty(respoOccupationTxtbx.Text) ? (object)DBNull.Value : respoOccupationTxtbx.Text);
                         RSDBCommand2.Parameters.AddWithValue("@respo_PassportID", string.IsNullOrEmpty(respoPassportTxtbx.Text) ? (object)DBNull.Value : respoPassportTxtbx.Text);
-
-
 
                         RSDBCommand2.Parameters.AddWithValue("@respo_RelationshipToVictim", respoCmbRelationship.SelectedItem?.ToString() ?? DBNull.Value.ToString());
 
@@ -328,15 +345,9 @@ namespace VAWC_Recording_System.NewForms
                         CaseAutoID = CaseGenerateAutoID();
                         RSDBConnect.Close();
 
-                        //Carlos Code
-                        //label58.Text = CompAutoID.ToString();
-                        //label59.Text = ResAutoID.ToString();
-                        //label60.Text = CaseAutoID.ToString();
-
                         label58.Text = CaseAutoID.ToString();
                         label59.Text = CompAutoID.ToString();
                         label60.Text = ResAutoID.ToString();
-
 
                         //Referenceto Load Method
                         //label58.Text = CaseGenerateAutoID().ToString();
@@ -348,15 +359,11 @@ namespace VAWC_Recording_System.NewForms
                 }
             }
 
-
-
             catch (Exception ex)
             {
                 MessageBox.Show("Error: hhhhhhhh" + ex.Message);
             }
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {

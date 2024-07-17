@@ -71,10 +71,7 @@ namespace VAWC_Recording_System
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void close_button_Click_1(object sender, EventArgs e)
         {
