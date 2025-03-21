@@ -1,15 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
-using VAWC_Recording_System.NewForms;
 
 namespace VAWC_Recording_System
 {
@@ -17,7 +8,7 @@ namespace VAWC_Recording_System
     {
         private const string Format = "dddd, MMMM dd, yyyy";
         private Form activeForm;
-
+        private Stopwatch stopwatch;
 
         public string accountname
         {
@@ -28,7 +19,7 @@ namespace VAWC_Recording_System
         public string accountrole
         {
             get { return label2.Text; }
-            set { label2.Text = value;}
+            set { label2.Text = value; }
         }
 
         public string accountID
@@ -41,17 +32,26 @@ namespace VAWC_Recording_System
         {
             InitializeComponent();
 
+            // Initialize and start the Stopwatch
+            stopwatch = Stopwatch.StartNew();
+
             Timer timer = new Timer();
-            timer.Interval = 1000;
+            timer.Interval = 100; // Update the time every 100 milliseconds
             timer.Tick += timer1_Tick;
             timer.Start();
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label4.Text = DateTime.Now.ToString(Format);
-            label6.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            // Get current DateTime and elapsed time from Stopwatch
+            DateTime now = DateTime.Now;
+            long elapsedTicks = stopwatch.ElapsedTicks;
+            // Convert ticks to nanoseconds (1 tick = 100 nanoseconds)
+            long nanoseconds = elapsedTicks * 100;
+
+            // Update labels with DateTime and nanoseconds
+            label4.Text = now.ToString(Format);
+            label6.Text = $"{now:hh:mm:ss tt}";
         }
 
         private void openingForm(Form childForm)
@@ -60,7 +60,7 @@ namespace VAWC_Recording_System
                 activeForm.Close();
 
             activeForm = childForm;
-           
+
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -85,6 +85,7 @@ namespace VAWC_Recording_System
         {
             openingForm(new NewForms.CaseList());
         }
+
         private void inTakeForm_btn_Click(object sender, EventArgs e)
         {
             openingForm(new NewForms.IntakeForm());
@@ -92,12 +93,12 @@ namespace VAWC_Recording_System
 
         private void reports_btn_Click(object sender, EventArgs e)
         {
-             openingForm(new NewForms.Reports());
+            openingForm(new NewForms.Reports());
         }
 
         private void manageCaselist_btn_Click(object sender, EventArgs e)
         {
-            string currentUser = label5.Text; 
+            string currentUser = label5.Text;
             SFManageCaselist loginForm = new SFManageCaselist(this, currentUser);
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
@@ -109,7 +110,7 @@ namespace VAWC_Recording_System
         private void logout_btn_Click(object sender, EventArgs e)
         {
             DialogResult userChoice;
-            userChoice = MessageBox.Show("Confirm if you want to log out", "Confirmation",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            userChoice = MessageBox.Show("Confirm if you want to log out", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (userChoice == DialogResult.Yes)
             {
@@ -127,7 +128,7 @@ namespace VAWC_Recording_System
 
         private void systemManagement_btn_Click(object sender, EventArgs e)
         {
-            string userID = label5.Text; 
+            string userID = label5.Text;
             openingForm(new NewForms.SystemManagement(this, userID));
         }
 
@@ -180,9 +181,13 @@ namespace VAWC_Recording_System
 
             if (userChoice == DialogResult.Yes)
             {
-
                 Application.Exit();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

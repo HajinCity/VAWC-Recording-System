@@ -25,7 +25,7 @@ namespace VAWC_Recording_System
         public string MyConnect()
         {
 
-            con = @"SERVER=localhost;PORT=3306;DATABASE=vawcrsdb;UID=root;PASSWORD=#EvilQweEn45;default command timeout=120";
+            con = @"SERVER=localhost;PORT=3307;DATABASE=vawcrsdb;UID=root;PASSWORD=aQlK!bs2#$/];default command timeout=120";
 
             return con;
         }

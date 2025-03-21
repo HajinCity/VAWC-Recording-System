@@ -102,7 +102,7 @@
             this.RA9262_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9262_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9262_Button.Location = new System.Drawing.Point(24, 70);
-            this.RA9262_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA9262_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA9262_Button.Name = "RA9262_Button";
             this.RA9262_Button.Size = new System.Drawing.Size(118, 40);
             this.RA9262_Button.TabIndex = 5;
@@ -117,7 +117,7 @@
             this.RA8353_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA8353_Button.ForeColor = System.Drawing.Color.Black;
             this.RA8353_Button.Location = new System.Drawing.Point(160, 70);
-            this.RA8353_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA8353_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA8353_Button.Name = "RA8353_Button";
             this.RA8353_Button.Size = new System.Drawing.Size(118, 40);
             this.RA8353_Button.TabIndex = 6;
@@ -132,7 +132,7 @@
             this.RA7877_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA7877_Button.ForeColor = System.Drawing.Color.Black;
             this.RA7877_Button.Location = new System.Drawing.Point(297, 70);
-            this.RA7877_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA7877_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA7877_Button.Name = "RA7877_Button";
             this.RA7877_Button.Size = new System.Drawing.Size(118, 40);
             this.RA7877_Button.TabIndex = 7;
@@ -147,7 +147,7 @@
             this.RA7610_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA7610_Button.ForeColor = System.Drawing.Color.Black;
             this.RA7610_Button.Location = new System.Drawing.Point(434, 70);
-            this.RA7610_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA7610_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA7610_Button.Name = "RA7610_Button";
             this.RA7610_Button.Size = new System.Drawing.Size(118, 40);
             this.RA7610_Button.TabIndex = 8;
@@ -162,7 +162,7 @@
             this.RA9208_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9208_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9208_Button.Location = new System.Drawing.Point(571, 70);
-            this.RA9208_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA9208_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA9208_Button.Name = "RA9208_Button";
             this.RA9208_Button.Size = new System.Drawing.Size(118, 40);
             this.RA9208_Button.TabIndex = 9;
@@ -177,7 +177,7 @@
             this.RA9775_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9775_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9775_Button.Location = new System.Drawing.Point(707, 70);
-            this.RA9775_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA9775_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA9775_Button.Name = "RA9775_Button";
             this.RA9775_Button.Size = new System.Drawing.Size(118, 40);
             this.RA9775_Button.TabIndex = 10;
@@ -192,7 +192,7 @@
             this.RA9995_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RA9995_Button.ForeColor = System.Drawing.Color.Black;
             this.RA9995_Button.Location = new System.Drawing.Point(844, 70);
-            this.RA9995_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RA9995_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RA9995_Button.Name = "RA9995_Button";
             this.RA9995_Button.Size = new System.Drawing.Size(118, 40);
             this.RA9995_Button.TabIndex = 11;
@@ -207,7 +207,7 @@
             this.RPC_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RPC_Button.ForeColor = System.Drawing.Color.Black;
             this.RPC_Button.Location = new System.Drawing.Point(981, 70);
-            this.RPC_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RPC_Button.Margin = new System.Windows.Forms.Padding(2);
             this.RPC_Button.Name = "RPC_Button";
             this.RPC_Button.Size = new System.Drawing.Size(232, 40);
             this.RPC_Button.TabIndex = 11;
@@ -228,7 +228,7 @@
             this.panel2.Controls.Add(this.RA9775_Button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 259);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1258, 126);
             this.panel2.TabIndex = 12;
@@ -244,7 +244,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1258, 259);
             this.panel3.TabIndex = 13;
@@ -256,7 +256,7 @@
             this.panel6.Controls.Add(this.label7);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel6.Location = new System.Drawing.Point(287, 172);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(243, 54);
             this.panel6.TabIndex = 7;
@@ -315,7 +315,7 @@
             this.panel7.Controls.Add(this.label12);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Location = new System.Drawing.Point(555, 109);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(658, 118);
             this.panel7.TabIndex = 4;
@@ -399,7 +399,7 @@
             this.panel5.Controls.Add(this.label6);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel5.Location = new System.Drawing.Point(287, 109);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(243, 54);
             this.panel5.TabIndex = 2;
@@ -432,7 +432,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel4.Location = new System.Drawing.Point(25, 109);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(243, 118);
             this.panel4.TabIndex = 1;

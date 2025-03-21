@@ -102,5 +102,15 @@ namespace VAWC_Recording_System
                 password_txtbx.UseSystemPasswordChar = true;
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_txtbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
